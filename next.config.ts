@@ -1,7 +1,35 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // experimental: {
+  //   staticGenerationMaxConcurrency: 1,
+  //   staticGenerationRetryCount: 3,
+  // },
+  eslint: {
+    dirs: ['src'],
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'image.mux.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.datocms-assets.com',
+      },
+    ],
+  },
+  sassOptions: {
+    silenceDeprecations: [
+      'mixed-decls',
+      'color-functions',
+      'global-builtin',
+      'import',
+      'legacy-js-api',
+    ],
+  },
+  redirects: async () => [],
+}
 
-export default nextConfig;
+export default nextConfig

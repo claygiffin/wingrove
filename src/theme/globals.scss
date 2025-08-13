@@ -14,8 +14,9 @@
     'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia,
     serif;
 
-  --ff-body: var(--ff-brother-1816), var(--sans-serif);
-  --ff-display: var(--ff-bitter), var(--serif);
+  --ff-body: var(--ff-helveticaNeue), var(--sans-serif);
+  --ff-display: var(--ff-teodor), var(--serif);
+  --ff-nav: var(--ff-brown), var(--serif);
 
   /* Font Sizes */
   --fs-144: calc(4rem + 6.667vw);
@@ -162,11 +163,11 @@ p {
   }
   a {
     display: inline-block;
-    color: var(--color-gold);
+    color: var(--color-orange);
     font-weight: 400;
     transition: color 200ms ease;
     &:hover {
-      color: var(--color-goldTint2);
+      color: var(--color-orange);
     }
   }
 }

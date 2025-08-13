@@ -1,0 +1,107 @@
+@use '@/theme/mixins' as *;
+
+.spacer {
+  height: max(
+    calc(1.5 * var(--fs-24) + 1rem + 3px),
+    calc(var(--fs-15) * 3.5 + 1rem + 3px)
+  );
+  body:has([data-home]) & {
+    height: 0;
+  }
+}
+.container {
+  position: sticky;
+  top: var(--alert-height, 0px);
+  display: grid;
+  width: 100%;
+  height: 0px;
+  overflow: visible;
+  z-index: 11;
+  --border-width: 3px;
+  transition: top 300ms ease;
+  [data-alert][data-scrolled-up='false'] + & {
+    top: 0px;
+  }
+  [data-alert][data-scrolled-up='true'] + & {
+    &:before {
+      background: #fff;
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  transition: background-color 500ms ease;
+  box-sizing: border-box;
+  background-color: var(--color-blueDark);
+}
+
+.logoWrap {
+  align-self: center;
+  z-index: 1;
+  font-size: var(--fs-24);
+  transition: opacity 300ms ease;
+  padding: 0.5em 0 0.5em 3em;
+  @include media('<m') {
+    padding: 0.5em 0 0.5em 0.5em;
+  }
+  svg {
+    display: block;
+    height: 36px;
+    width: auto;
+  }
+}
+
+.navItems {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  z-index: 1;
+  @include media('<s') {
+    justify-content: flex-end;
+  }
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: var(--fs-18);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 1em;
+  position: relative;
+  cursor: pointer;
+  transition: color 200ms ease;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-family: var(--ff-nav);
+  font-weight: 700;
+  height: 100%;
+  &:last-child {
+    background-color: var(--color-orange);
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-orange);
+    }
+    &:last-child:hover {
+      color: var(--color-blueDark);
+    }
+  }
+  @include media('<ml') {
+    &:not(:last-child) {
+      display: none;
+    }
+  }
+  @include media('<s') {
+    width: 65%;
+  }
+}

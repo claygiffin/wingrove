@@ -1,0 +1,114 @@
+@use '@/theme/mixins' as *;
+
+.section {
+  position: relative;
+  min-height: 30vh;
+  color: white;
+  font-size: var(--fs-72);
+  z-index: 2;
+  overflow: hidden;
+  padding: 1em 0;
+  @include media('<m') {
+    padding: 0.6em 1em;
+  }
+  @include media('<s') {
+    padding: 0.6em;
+  }
+}
+.background {
+  background: linear-gradient(to bottom right, #333, #111);
+  @include absolute-fill;
+  z-index: 1;
+  pointer-events: none;
+  .image {
+    height: 100%;
+  }
+}
+.body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5em;
+  height: 100%;
+  @include media('<m') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1em;
+  }
+  .logoContainer {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition-property: opacity transform;
+    transition-duration: 2000ms;
+    transition-timing-function: cubic-bezier(0.25, 0.75, 0.25, 1);
+    transition-delay: 100ms;
+    [data-in-view='true'] & {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    @include media('<m') {
+      margin-top: 0.2em;
+      align-items: flex-start;
+    }
+    @include media('<s') {
+      display: none;
+    }
+    svg {
+      height: fit-content;
+    }
+  }
+  .descriptionContainer {
+    display: flex;
+    justify-content: flex-start;
+    @include media('<m') {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    @include media('<s') {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    .description {
+      width: 80%;
+      @include media('<m') {
+        width: 100%;
+      }
+      z-index: 2;
+      color: var(--color-blueDark);
+      opacity: 0;
+      transform: translateX(100%);
+      transition-property: opacity transform;
+      transition-duration: 2000ms;
+      transition-timing-function: cubic-bezier(0.25, 0.75, 0.25, 1);
+      transition-delay: 100ms;
+      [data-in-view='true'] & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .heading {
+        font-size: var(--fs-48);
+        margin: 0;
+        font-weight: 400;
+        em {
+          display: block;
+          font-style: normal;
+        }
+      }
+      > p {
+        font-size: var(--fs-16);
+        line-height: 1.25;
+        margin-top: 0;
+      }
+      .line {
+        margin: 0.25em 0 0.4em;
+        border: 2px solid var(--color-orange);
+        width: 10%;
+        @include media('<m') {
+          margin: 0.35em 0 0.45em;
+        }
+      }
+    }
+  }
+}

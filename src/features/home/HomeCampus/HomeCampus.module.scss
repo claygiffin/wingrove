@@ -32,7 +32,7 @@
 }
 .body {
   z-index: 2;
-  background-color: var(--color-orange);
+  background-color: var(--color-sand);
   padding: 0.6em;
   width: 75%;
   @include media('>=ms') {
@@ -68,7 +68,7 @@
     }
     .borderCell {
       width: 0.15em;
-      background-color: var(--color-sand);
+      background-color: var(--color-orange);
       &:nth-child(odd) {
         background-color: var(--color-blueDark);
       }
@@ -81,7 +81,7 @@
     }
     @include media('<ms') {
       padding: 0.75em 0.75em 0.75em 0.85em;
-      background-color: var(--color-orange);
+      background-color: var(--color-sand);
       opacity: 0;
       transform: translateY(200%);
       transition-property: opacity transform;
@@ -112,12 +112,13 @@
           font-size: var(--fs-18);
           font-family: var(--ff-nav);
           text-transform: uppercase;
-          color: var(--color-blueDark);
+          color: var(--color-orange);
           margin: 0;
           font-weight: 400;
         }
         .heading {
           font-size: var(--fs-48);
+          color: var(--color-blueDark);
           font-weight: 400;
           margin: 0.3em 0 0;
         }
@@ -130,6 +131,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 0.3em;
+      color: var(--color-blueDark);
       @include media('<ls') {
         width: 60%;
       }
@@ -145,7 +147,7 @@
       }
     }
     .line {
-      border: 2px solid var(--color-blueDark);
+      border: 2px solid var(--color-orange);
       align-self: stretch;
       @include media('<m') {
         margin: 0.3em 0;

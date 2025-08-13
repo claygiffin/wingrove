@@ -25,6 +25,12 @@ export const FooterFragment = gql`
         ...AnchorLink
       }
     }
+    footerSignupLabel
+    footerSignupLink {
+      ... on PageLinkRecord {
+        ...PageLink
+      }
+    }
   }
   ${AnchorLinkFragment}
   ${EmailLinkFragment}

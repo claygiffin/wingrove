@@ -292,6 +292,8 @@ type FooterRecord = RecordInterface & {
   footerEmail: EmailLinkRecord;
   footerEmailLabel: Scalars['String']['output'];
   footerLinks: Array<FooterModelFooterLinksField>;
+  footerSignupLabel: Scalars['String']['output'];
+  footerSignupLink: PageLinkRecord;
   id: Scalars['ItemId']['output'];
 };
 
@@ -2853,7 +2855,7 @@ type HomePageQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePage
 type RootLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type RootLayoutQuery = { __typename?: 'Query', nav?: { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> } | null, footer?: { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }> } | null };
+type RootLayoutQuery = { __typename?: 'Query', nav?: { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> } | null, footer?: { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } } } | null };
 
 type ResponsiveImageFragment = { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null };
 
@@ -2871,7 +2873,7 @@ type HomeVisionariesFragment = { __typename?: 'HomePageRecord', visionariesTitle
 
 type HomeWelcomeFragment = { __typename?: 'HomePageRecord', welcomeHeading: string, welcomeBody?: { __typename?: 'HomePageModelWelcomeBodyField', value: unknown } | null, welcomeImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null };
 
-type FooterFragment = { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }> };
+type FooterFragment = { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } } };
 
 type NavFragment = { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> };
 

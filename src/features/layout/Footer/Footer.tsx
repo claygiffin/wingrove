@@ -1,13 +1,12 @@
 'use client'
 
-import { type ComponentProps } from 'react'
+import { type ComponentProps, useState } from 'react'
 
+import { HubspotForm } from '@/features/hubSpotForm'
 import { DatoLink } from '@/features/links'
-import {
-  LogoHorizontal,
-  LogoStacked,
-  LogoWelcome,
-} from '@/features/logo'
+import { LogoHorizontal, LogoWelcome } from '@/features/logo'
+import { Modal } from '@/features/modal'
+import { useEscKeyFunction } from '@/hooks/useEscKeyFunction'
 
 import styles from './Footer.module.scss'
 
@@ -16,6 +15,14 @@ type Props = ComponentProps<'div'> & {
 }
 
 export const Footer = ({ data, ...props }: Props) => {
+  const [contactModalOpen, setContactModalOpen] = useState(false)
+
+  const openContactModal = () => {
+    setContactModalOpen(true)
+  }
+
+  useEscKeyFunction(() => setContactModalOpen(false))
+
   return (
     <footer
       className={styles.footer}
@@ -30,6 +37,7 @@ export const Footer = ({ data, ...props }: Props) => {
             key={data?.footerSignupLink?.id}
             data={data?.footerSignupLink}
             className={styles.signupLink}
+            onClick={openContactModal}
           />
         </div>
       </div>
@@ -71,6 +79,11 @@ export const Footer = ({ data, ...props }: Props) => {
           </div>
         </div>
       </div>
+      {contactModalOpen && (
+        <Modal onClose={() => setContactModalOpen(false)}>
+          <HubspotForm />
+        </Modal>
+      )}
     </footer>
   )
 }

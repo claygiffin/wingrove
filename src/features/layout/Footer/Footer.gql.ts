@@ -3,6 +3,7 @@ import { gql } from 'graphql-tag'
 import {
   AnchorLinkFragment,
   EmailLinkFragment,
+  KeepMePostedLinkFragment,
   PageLinkFragment,
 } from '@/features/links'
 
@@ -27,12 +28,13 @@ export const FooterFragment = gql`
     }
     footerSignupLabel
     footerSignupLink {
-      ... on PageLinkRecord {
-        ...PageLink
+      ... on KeepMePostedLinkRecord {
+        ...KeepMePostedLink
       }
     }
   }
   ${AnchorLinkFragment}
   ${EmailLinkFragment}
   ${PageLinkFragment}
+  ${KeepMePostedLinkFragment}
 `

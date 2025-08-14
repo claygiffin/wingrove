@@ -8,7 +8,7 @@ export const HubspotTracking = () => {
 
     // Inject the external tracking script
     const script = document.createElement('script')
-    const scriptSrc = 'https://js.hs-scripts.com/22194233.js'
+    const scriptSrc = 'https://js-na2.hs-scripts.com/242324058.js'
     const scriptId = 'hs-script-loader'
     script.src = scriptSrc
     script.async = true

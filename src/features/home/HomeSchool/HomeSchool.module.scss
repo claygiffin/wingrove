@@ -121,9 +121,12 @@
         text-decoration: none;
       }
       > p {
-        margin: 0;
         font-size: var(--fs-15);
         line-height: 1.5;
+        margin-top: 0;
+        &:last-child {
+          margin: 0;
+        }
         @include media('<ms') {
           overflow-y: hidden;
         }

@@ -44,11 +44,13 @@
     padding: 5em 10em;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    color: var(--color-aqua);
     @include media('<m') {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       padding: 5em 3em;
       gap: 3em;
+    }
+    @include media('<ms') {
+      gap: 4em;
     }
     .backgroundLogo {
       @include absolute-fill;
@@ -79,8 +81,11 @@
         gap: 1.5em;
         .logoAqua {
           svg {
-            width: 60%;
+            width: 70%;
             height: 100%;
+            @include media('<m') {
+              width: 50%;
+            }
             @include media('<ms') {
               width: 100%;
             }
@@ -88,7 +93,11 @@
         }
         .address {
           font-size: var(--fs-36);
+          color: white;
           margin: 0;
+          @include media('<ms') {
+            font-size: var(--fs-24);
+          }
         }
       }
     }
@@ -118,12 +127,24 @@
             font-size: var(--fs-27);
             color: white;
             margin: 0;
+            @include media('<m') {
+              font-size: var(--fs-30);
+            }
+            @include media('<ms') {
+              font-size: var(--fs-24);
+            }
           }
           .email {
             font-family: var(--ff-display);
             font-size: var(--fs-27);
             color: var(--color-aqua);
             text-underline-offset: 0.1em;
+            @include media('<m') {
+              font-size: var(--fs-30);
+            }
+            @include media('<ms') {
+              font-size: var(--fs-24);
+            }
           }
         }
         .links {
@@ -131,7 +152,7 @@
           align-items: center;
           padding-bottom: 0.5em;
           .link {
-            font-size: var(--fs-16);
+            font-size: var(--fs-18);
             color: var(--color-aqua);
             text-decoration: none;
           }

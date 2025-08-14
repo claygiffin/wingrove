@@ -27,8 +27,9 @@
   cursor: default;
   transition: opacity var(--close-duration, 1000ms) ease;
   opacity: 0;
+  background-color: var(--color-blueDark);
   [data-animating='OPEN'] & {
-    opacity: 1;
+    opacity: 0.3;
     transition-duration: var(--open-duration, 500ms);
   }
 }

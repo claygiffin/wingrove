@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 const config = {
-  siteUrl: 'https://www.wingrove.com',
+  siteUrl: 'https://www.wingroveacademy.org',
   generateRobotsTxt: true, // (optional)
   exclude: ['/icon.svg'],
 }

@@ -25,6 +25,9 @@ export const FooterFragment = gql`
       ... on AnchorLinkRecord {
         ...AnchorLink
       }
+      ... on KeepMePostedLinkRecord {
+        ...KeepMePostedLink
+      }
     }
     footerSignupLabel
     footerSignupLink {

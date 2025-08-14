@@ -9,6 +9,7 @@ import {
   Nav,
   NavFragment,
 } from '@/features/layout'
+import { PrivacyPolicyFragment } from '@/features/privacyPolicy'
 import { HubspotTracking } from '@/features/tracking'
 import { datoRequest } from '@/lib/datocms-fetch'
 import { brown, helveticaNeue, teodor } from '@/theme/fonts/fontface'
@@ -23,9 +24,13 @@ const query = gql`
     footer {
       ...Footer
     }
+    privacyPolicy {
+      ...PrivacyPolicy
+    }
   }
   ${NavFragment}
   ${FooterFragment}
+  ${PrivacyPolicyFragment}
 `
 
 const RootLayout = async ({
@@ -57,7 +62,10 @@ const RootLayout = async ({
           <Nav data={data.nav} />
           {children}
           <div id="lightbox-container">{modal}</div>
-          <Footer data={data.footer}></Footer>
+          <Footer
+            data={data.footer}
+            privacyPolicy={data.privacyPolicy}
+          ></Footer>
         </body>
       </html>
     </ContextWrapper>

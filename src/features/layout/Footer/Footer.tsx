@@ -6,22 +6,33 @@ import { HubspotForm } from '@/features/hubSpotForm'
 import { DatoLink } from '@/features/links'
 import { LogoHorizontal, LogoWelcome } from '@/features/logo'
 import { Modal } from '@/features/modal'
+import { PrivacyPolicy } from '@/features/privacyPolicy'
 import { useEscKeyFunction } from '@/hooks/useEscKeyFunction'
 
 import styles from './Footer.module.scss'
 
 type Props = ComponentProps<'div'> & {
   data: Queries.FooterFragment | null | undefined
+  privacyPolicy: Queries.PrivacyPolicyFragment | null | undefined
 }
 
-export const Footer = ({ data, ...props }: Props) => {
+export const Footer = ({ data, privacyPolicy, ...props }: Props) => {
   const [contactModalOpen, setContactModalOpen] = useState(false)
+  const [privacyPolicyModalOpen, setPrivacyPolicyModalOpen] =
+    useState(false)
 
   const openContactModal = () => {
     setContactModalOpen(true)
   }
 
-  useEscKeyFunction(() => setContactModalOpen(false))
+  const openPrivacyPolicyModal = () => {
+    setPrivacyPolicyModalOpen(true)
+  }
+
+  useEscKeyFunction(() => {
+    setContactModalOpen(false)
+    setPrivacyPolicyModalOpen(false)
+  })
 
   return (
     <footer
@@ -72,6 +83,11 @@ export const Footer = ({ data, ...props }: Props) => {
                     key={link?.id}
                     data={link}
                     className={styles.link}
+                    onClick={() =>
+                      link?.__typename === 'KeepMePostedLinkRecord'
+                        ? openPrivacyPolicyModal()
+                        : null
+                    }
                   />
                 )
               })}
@@ -82,6 +98,11 @@ export const Footer = ({ data, ...props }: Props) => {
       {contactModalOpen && (
         <Modal onClose={() => setContactModalOpen(false)}>
           <HubspotForm />
+        </Modal>
+      )}
+      {privacyPolicyModalOpen && (
+        <Modal onClose={() => setPrivacyPolicyModalOpen(false)}>
+          <PrivacyPolicy data={privacyPolicy}></PrivacyPolicy>
         </Modal>
       )}
     </footer>

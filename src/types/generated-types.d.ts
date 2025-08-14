@@ -270,7 +270,7 @@ type FileFieldInterfaceurlArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
 };
 
-type FooterModelFooterLinksField = AnchorLinkRecord | PageLinkRecord;
+type FooterModelFooterLinksField = AnchorLinkRecord | KeepMePostedLinkRecord | PageLinkRecord;
 
 /** Record of type Footer (footer) */
 type FooterRecord = RecordInterface & {
@@ -2290,6 +2290,41 @@ type PageLinkRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+type PrivacyPolicyModelPrivacyPolicyTextField = {
+  __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+/** Record of type Privacy Policy (privacy_policy) */
+type PrivacyPolicyRecord = RecordInterface & {
+  __typename?: 'PrivacyPolicyRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  privacyPolicyHeading: Scalars['String']['output'];
+  privacyPolicyText: PrivacyPolicyModelPrivacyPolicyTextField;
+};
+
+
+/** Record of type Privacy Policy (privacy_policy) */
+type PrivacyPolicyRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
 /** The query root for this schema */
 type Query = {
   __typename?: 'Query';
@@ -2305,6 +2340,8 @@ type Query = {
   homePage?: Maybe<HomePageRecord>;
   /** Returns the single instance record */
   nav?: Maybe<NavRecord>;
+  /** Returns the single instance record */
+  privacyPolicy?: Maybe<PrivacyPolicyRecord>;
   /** Returns a specific asset */
   upload?: Maybe<FileField>;
 };
@@ -2351,6 +2388,13 @@ type QueryhomePageArgs = {
 
 /** The query root for this schema */
 type QuerynavArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type QueryprivacyPolicyArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
@@ -2855,7 +2899,7 @@ type HomePageQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePage
 type RootLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type RootLayoutQuery = { __typename?: 'Query', nav?: { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> } | null, footer?: { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } } | null };
+type RootLayoutQuery = { __typename?: 'Query', nav?: { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> } | null, footer?: { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } } | null, privacyPolicy?: { __typename: 'PrivacyPolicyRecord', id: string, privacyPolicyHeading: string, privacyPolicyText: { __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField', value: unknown } } | null };
 
 type ResponsiveImageFragment = { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null };
 
@@ -2873,7 +2917,7 @@ type HomeVisionariesFragment = { __typename?: 'HomePageRecord', visionariesTitle
 
 type HomeWelcomeFragment = { __typename?: 'HomePageRecord', welcomeHeading: string, welcomeBody?: { __typename?: 'HomePageModelWelcomeBodyField', value: unknown } | null, welcomeImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null };
 
-type FooterFragment = { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } };
+type FooterFragment = { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } };
 
 type NavFragment = { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> };
 
@@ -2884,5 +2928,7 @@ type EmailLinkFragment = { __typename: 'EmailLinkRecord', id: string, email: str
 type KeepMePostedLinkFragment = { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string };
 
 type PageLinkFragment = { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } };
+
+type PrivacyPolicyFragment = { __typename: 'PrivacyPolicyRecord', id: string, privacyPolicyHeading: string, privacyPolicyText: { __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField', value: unknown } };
 
 }

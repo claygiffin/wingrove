@@ -9,6 +9,7 @@ import { KeepMePostedLink } from '../KeepMePostedLink/KeepMePostedLink'
 import { type IconType } from '../LinkIcon/LinkIcon'
 import { PageLink } from '../PageLink/PageLink'
 import styles from './DatoLink.module.scss'
+import { Pdf } from '../Pdf/Pdf'
 
 type Props = ComponentProps<'a' | 'button'> & {
   iconType?: IconType
@@ -24,6 +25,7 @@ type Props = ComponentProps<'a' | 'button'> & {
     | Queries.PageLinkFragment
     | Queries.EmailLinkFragment
     | Queries.ExternalLinkFragment
+    | Queries.PdfFragment
     | null
     | undefined
 }
@@ -86,6 +88,14 @@ export const DatoLink = ({
     case 'ExternalLinkRecord': {
       return (
         <ExternalLink
+          data={data}
+          {...(linkProps as ComponentProps<'a'>)}
+        />
+      )
+    }
+    case 'PdfRecord': {
+      return (
+        <Pdf
           data={data}
           {...(linkProps as ComponentProps<'a'>)}
         />

@@ -2,6 +2,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import gql from 'graphql-tag'
 import type { ReactNode } from 'react'
 
+import { CookieBanner } from '@/features/cookieBanner'
 import {
   ContextWrapper,
   Footer,
@@ -66,6 +67,7 @@ const RootLayout = async ({
             data={data.footer}
             privacyPolicy={data.privacyPolicy}
           ></Footer>
+          <CookieBanner />
         </body>
       </html>
     </ContextWrapper>

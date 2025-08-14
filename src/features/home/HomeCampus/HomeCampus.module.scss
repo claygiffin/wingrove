@@ -35,6 +35,7 @@
   background-color: var(--color-sand);
   padding: 0.6em;
   width: 75%;
+  margin: 1em 0;
   @include media('>=ms') {
     opacity: 0;
     transform: translateY(200%);
@@ -51,6 +52,7 @@
     width: 50%;
   }
   @include media('<ms') {
+    margin: 0;
     position: relative;
     width: fit-content;
     padding: 0em;

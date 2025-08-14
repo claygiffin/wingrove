@@ -2,7 +2,6 @@
 
 .section {
   position: relative;
-  min-height: 100vh;
   color: white;
   font-size: var(--fs-72);
   z-index: 2;
@@ -24,7 +23,6 @@
   }
 }
 .body {
-  @include absolute-fill;
   z-index: 2;
   display: flex;
   @include media('<ms') {
@@ -34,13 +32,10 @@
     z-index: 4;
     display: grid;
     grid-template-rows: repeat(15, minmax(0, 1fr));
-    height: 100%;
-    @include media('<ms') {
-      flex: 0 0 auto;
-      display: grid;
-      grid-template-rows: repeat(15, 1fr);
-      height: auto;
-    }
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    height: auto;
     .borderCell {
       background-color: var(--color-blueDark);
       width: 0.35em;
@@ -129,8 +124,6 @@
         margin: 0;
         font-size: var(--fs-15);
         line-height: 1.5;
-        flex: 1;
-        overflow-y: auto;
         @include media('<ms') {
           overflow-y: hidden;
         }

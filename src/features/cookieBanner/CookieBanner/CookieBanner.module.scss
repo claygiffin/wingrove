@@ -8,14 +8,14 @@
   z-index: 5;
   .cookieBanner {
     background-color: var(--color-sand);
-    padding: 0.5em 2em;
+    padding: 0.75em 2em;
     display: flex;
     justify-content: space-between;
     gap: 2em;
     @include media('<ms') {
       flex-direction: column;
       gap: 0.75em;
-      padding: 0.5em 1em;
+      padding: 1em 1.25em;
     }
     .descriptionWrapper {
       display: flex;

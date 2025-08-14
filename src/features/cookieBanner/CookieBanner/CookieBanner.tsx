@@ -33,7 +33,7 @@ export const CookieBanner = () => {
       <div className={styles.cookieBanner}>
         <div className={styles.descriptionWrapper}>
           <p className={styles.description}>
-            We use cookies to improve your experience.
+            We use cookies to improve your experience.{' '}
             <span className={styles.mobileBreak}>
               <br />
             </span>

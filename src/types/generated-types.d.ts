@@ -107,6 +107,33 @@ type EmailLinkRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+/** Block of type External Link (external_link) */
+type ExternalLinkRecord = RecordInterface & {
+  __typename?: 'ExternalLinkRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  linkText: Scalars['String']['output'];
+  url: Scalars['String']['output'];
+};
+
+
+/** Block of type External Link (external_link) */
+type ExternalLinkRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
 enum FaviconType {
   appleTouchIcon = 'appleTouchIcon',
   icon = 'icon',
@@ -328,6 +355,8 @@ type HomePageModelSchoolBodyField = {
   value: Scalars['JsonField']['output'];
 };
 
+type HomePageModelSchoolLinkField = ExternalLinkRecord | PageLinkRecord;
+
 type HomePageModelVisionariesBodyField = {
   __typename?: 'HomePageModelVisionariesBodyField';
   blocks: Array<Scalars['String']['output']>;
@@ -370,7 +399,7 @@ type HomePageRecord = RecordInterface & {
   schoolBody: HomePageModelSchoolBodyField;
   schoolHeading: Scalars['String']['output'];
   schoolImages: Array<FileField>;
-  schoolLink?: Maybe<AnchorLinkRecord>;
+  schoolLink?: Maybe<HomePageModelSchoolLinkField>;
   schoolTitle: Scalars['String']['output'];
   seo?: Maybe<SeoField>;
   slug?: Maybe<Scalars['String']['output']>;
@@ -2290,6 +2319,32 @@ type PageLinkRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+/** Block of type PDF (pdf) */
+type PdfRecord = RecordInterface & {
+  __typename?: 'PdfRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  pdf: FileField;
+};
+
+
+/** Block of type PDF (pdf) */
+type PdfRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
 type PrivacyPolicyModelPrivacyPolicyTextField = {
   __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField';
   blocks: Array<Scalars['String']['output']>;
@@ -2894,7 +2949,7 @@ type focalPoint = {
 type HomePageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type HomePageQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePageRecord', heroHeading: string, welcomeHeading: string, schoolTitle: string, schoolHeading: string, campusTitle: string, campusHeading: string, visionariesTitle: string, visionariesHeading: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, heroImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, welcomeBody?: { __typename?: 'HomePageModelWelcomeBodyField', value: unknown } | null, welcomeImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, campusBody?: { __typename?: 'HomePageModelCampusBodyField', value: unknown } | null, campusImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, visionariesBody?: { __typename?: 'HomePageModelVisionariesBodyField', value: unknown } | null, visionariesImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | null };
+type HomePageQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePageRecord', heroHeading: string, welcomeHeading: string, schoolTitle: string, schoolHeading: string, campusTitle: string, campusHeading: string, visionariesTitle: string, visionariesHeading: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, heroImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, welcomeBody?: { __typename?: 'HomePageModelWelcomeBodyField', value: unknown } | null, welcomeImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, campusBody?: { __typename?: 'HomePageModelCampusBodyField', value: unknown } | null, campusImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, visionariesBody?: { __typename?: 'HomePageModelVisionariesBodyField', value: unknown } | null, visionariesImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | null };
 
 type RootLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2909,7 +2964,7 @@ type HomeHeroFragment = { __typename?: 'HomePageRecord', heroHeading: string, he
 
 type HomeHeroImagesFragment = { __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null };
 
-type HomeSchoolFragment = { __typename?: 'HomePageRecord', schoolTitle: string, schoolHeading: string, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }> };
+type HomeSchoolFragment = { __typename?: 'HomePageRecord', schoolTitle: string, schoolHeading: string, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }> };
 
 type HomeSchoolImagesFragment = { __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null };
 
@@ -2924,6 +2979,8 @@ type NavFragment = { __typename: 'NavRecord', id: string, links: Array<{ __typen
 type AnchorLinkFragment = { __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string };
 
 type EmailLinkFragment = { __typename: 'EmailLinkRecord', id: string, email: string };
+
+type ExternalLinkFragment = { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string };
 
 type KeepMePostedLinkFragment = { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string };
 

@@ -1,6 +1,9 @@
 import gql from 'graphql-tag'
 
-import { AnchorLinkFragment } from '@/features/links'
+import {
+  ExternalLinkFragment,
+  PageLinkFragment,
+} from '@/features/links'
 
 import { HomeSchoolImagesFragment } from './HomeSchoolImages/HomeSchoolImages.gql'
 
@@ -12,8 +15,11 @@ export const HomeSchoolFragment = gql`
       value
     }
     schoolLink {
-      ... on AnchorLinkRecord {
-        ...AnchorLink
+      ... on ExternalLinkRecord {
+        ...ExternalLink
+      }
+      ... on PageLinkRecord {
+        ...PageLink
       }
     }
     schoolImages {
@@ -21,5 +27,6 @@ export const HomeSchoolFragment = gql`
     }
   }
   ${HomeSchoolImagesFragment}
-  ${AnchorLinkFragment}
+  ${ExternalLinkFragment}
+  ${PageLinkFragment}
 `

@@ -4,6 +4,7 @@ import { classes } from '@/utils/css'
 
 import { AnchorLink } from '../AnchorLink/AnchorLink'
 import { EmailLink } from '../EmailLink/EmailLink'
+import { ExternalLink } from '../ExternalLink/ExternalLink'
 import { KeepMePostedLink } from '../KeepMePostedLink/KeepMePostedLink'
 import { type IconType } from '../LinkIcon/LinkIcon'
 import { PageLink } from '../PageLink/PageLink'
@@ -22,6 +23,7 @@ type Props = ComponentProps<'a' | 'button'> & {
     | Queries.KeepMePostedLinkFragment
     | Queries.PageLinkFragment
     | Queries.EmailLinkFragment
+    | Queries.ExternalLinkFragment
     | null
     | undefined
 }
@@ -76,6 +78,14 @@ export const DatoLink = ({
     case 'EmailLinkRecord': {
       return (
         <EmailLink
+          data={data}
+          {...(linkProps as ComponentProps<'a'>)}
+        />
+      )
+    }
+    case 'ExternalLinkRecord': {
+      return (
+        <ExternalLink
           data={data}
           {...(linkProps as ComponentProps<'a'>)}
         />

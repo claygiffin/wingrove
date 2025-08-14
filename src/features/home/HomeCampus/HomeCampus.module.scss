@@ -54,7 +54,6 @@
     position: relative;
     width: fit-content;
     padding: 0em;
-    background-color: white;
   }
   .borderLeft {
     display: none;
@@ -81,7 +80,6 @@
     }
     @include media('<ms') {
       padding: 0.75em 0.75em 0.75em 0.85em;
-      background-color: var(--color-sand);
       opacity: 0;
       transform: translateY(200%);
       transition-property: opacity transform;

@@ -54,6 +54,8 @@
     line-height: 1.25;
     text-align: center;
     text-transform: uppercase;
+    white-space: normal;
+    word-break: break-word;
     @include media('<m') {
       font-size: var(--fs-30);
       font-weight: 400;

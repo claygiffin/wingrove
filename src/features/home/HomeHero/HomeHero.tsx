@@ -30,10 +30,10 @@ export const HomeHero = ({ data, ...props }: Props) => {
         </AnimateIn>
         <AnimateIn
           as="div"
-          innerAs="span"
+          innerAs="div"
           className={styles.heading}
         >
-          <span>{data?.heroHeading}</span>
+          <div>{data?.heroHeading}</div>
         </AnimateIn>
       </div>
     </section>

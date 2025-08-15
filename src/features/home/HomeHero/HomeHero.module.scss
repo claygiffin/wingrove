@@ -45,7 +45,7 @@
   @include media('<m') {
     font-size: 0.5em;
   }
-  > span {
+  > div {
     width: 70%;
     font-size: var(--fs-60);
     font-family: var(--ff-nav);

@@ -3,3 +3,4 @@
  */
 
 export * from './CookieBanner/CookieBanner'
+export * from './LearnMore/LearnMore'

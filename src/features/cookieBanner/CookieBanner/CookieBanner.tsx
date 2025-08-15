@@ -3,10 +3,15 @@
 import Cookies from 'js-cookie'
 import { useEffect, useState } from 'react'
 
+import { Modal } from '@/features/modal'
+import { useEscKeyFunction } from '@/hooks/useEscKeyFunction'
+
+import { LearnMore } from '../LearnMore/LearnMore'
 import styles from './CookieBanner.module.scss'
 
 export const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const [showLearnMoreModal, setShowLearnMoreModal] = useState(false)
 
   useEffect(() => {
     // Check if the cookie exists
@@ -25,6 +30,12 @@ export const CookieBanner = () => {
     Cookies.set('cookie-consent', 'false', { expires: 365 })
     setIsVisible(false)
   }
+
+  const openLearnMoreModal = () => {
+    setShowLearnMoreModal(true)
+  }
+
+  useEscKeyFunction(() => setShowLearnMoreModal(false))
 
   if (!isVisible) return null
 
@@ -51,10 +62,21 @@ export const CookieBanner = () => {
             onClick={handleDecline}
             className={styles.declineButton}
           >
-            Decline
+            Reject
+          </button>
+          <button
+            onClick={openLearnMoreModal}
+            className={styles.learnMoreButton}
+          >
+            Learn More
           </button>
         </div>
       </div>
+      {showLearnMoreModal && (
+        <Modal onClose={() => setShowLearnMoreModal(false)}>
+          <LearnMore />
+        </Modal>
+      )}
     </div>
   )
 }

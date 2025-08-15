@@ -8,8 +8,8 @@ import { ExternalLink } from '../ExternalLink/ExternalLink'
 import { KeepMePostedLink } from '../KeepMePostedLink/KeepMePostedLink'
 import { type IconType } from '../LinkIcon/LinkIcon'
 import { PageLink } from '../PageLink/PageLink'
-import styles from './DatoLink.module.scss'
 import { Pdf } from '../Pdf/Pdf'
+import styles from './DatoLink.module.scss'
 
 type Props = ComponentProps<'a' | 'button'> & {
   iconType?: IconType

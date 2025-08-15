@@ -3,4 +3,5 @@
  */
 
 export * from './ActiveCampaign'
+export * from './GoogleAnalytics'
 export * from './Hubspot'

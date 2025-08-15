@@ -11,7 +11,7 @@ import {
   NavFragment,
 } from '@/features/layout'
 import { PrivacyPolicyFragment } from '@/features/privacyPolicy'
-import { HubspotTracking } from '@/features/tracking'
+import { GoogleAnalytics, HubspotTracking } from '@/features/tracking'
 import { datoRequest } from '@/lib/datocms-fetch'
 import { brown, helveticaNeue, teodor } from '@/theme/fonts/fontface'
 import '@/theme/globals.scss'
@@ -58,6 +58,7 @@ const RootLayout = async ({
             gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''}
           />
           <HubspotTracking />
+          <GoogleAnalytics />
         </head>
         <body>
           <Nav data={data.nav} />

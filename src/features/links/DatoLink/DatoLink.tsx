@@ -6,6 +6,7 @@ import { AnchorLink } from '../AnchorLink/AnchorLink'
 import { EmailLink } from '../EmailLink/EmailLink'
 import { ExternalLink } from '../ExternalLink/ExternalLink'
 import { KeepMePostedLink } from '../KeepMePostedLink/KeepMePostedLink'
+import { Lightbox } from '../Lightbox/Lightbox'
 import { type IconType } from '../LinkIcon/LinkIcon'
 import { PageLink } from '../PageLink/PageLink'
 import { Pdf } from '../Pdf/Pdf'
@@ -26,6 +27,7 @@ type Props = ComponentProps<'a' | 'button'> & {
     | Queries.EmailLinkFragment
     | Queries.ExternalLinkFragment
     | Queries.PdfFragment
+    | Queries.LightboxFragment
     | null
     | undefined
 }
@@ -98,6 +100,14 @@ export const DatoLink = ({
         <Pdf
           data={data}
           {...(linkProps as ComponentProps<'a'>)}
+        />
+      )
+    }
+    case 'LightboxRecord': {
+      return (
+        <Lightbox
+          data={data}
+          {...(linkProps as ComponentProps<'button'>)}
         />
       )
     }

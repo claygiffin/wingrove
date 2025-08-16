@@ -1,0 +1,14 @@
+@use '@/theme/mixins' as *;
+
+.lightboxModalWrapper {
+  padding: 0.5em;
+  > p {
+    margin: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    font-size: var(--fs-18);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

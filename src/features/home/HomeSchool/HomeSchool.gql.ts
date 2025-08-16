@@ -2,6 +2,7 @@ import gql from 'graphql-tag'
 
 import {
   ExternalLinkFragment,
+  LightboxFragment,
   PageLinkFragment,
   PdfFragment,
 } from '@/features/links'
@@ -25,6 +26,9 @@ export const HomeSchoolFragment = gql`
       ... on PdfRecord {
         ...Pdf
       }
+      ... on LightboxRecord {
+        ...Lightbox
+      }
     }
     schoolImages {
       ...HomeSchoolImages
@@ -34,4 +38,5 @@ export const HomeSchoolFragment = gql`
   ${ExternalLinkFragment}
   ${PageLinkFragment}
   ${PdfFragment}
+  ${LightboxFragment}
 `

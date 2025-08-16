@@ -2,13 +2,31 @@
 
 .lightboxModalWrapper {
   padding: 0.5em;
-  > p {
+  .title {
+    font-size: var(--fs-48);
+    color: var(--color-blueDark);
+    margin: 0;
+    font-weight: 400;
+    em {
+      display: block;
+      font-style: normal;
+    }
+  }
+  .line {
+    border: 2px solid var(--color-orange);
+    margin: 0.3em 0;
+    width: 10%;
+  }
+  p, li, ul {
     margin: 0;
     margin-bottom: 0.5em;
     line-height: 1.5;
     font-size: var(--fs-18);
     &:last-child {
       margin-bottom: 0;
+    }
+    strong {
+      font-weight: 600;
     }
   }
 }

@@ -4,6 +4,7 @@ export const LightboxFragment = gql`
   fragment Lightbox on LightboxRecord {
     __typename
     id
+    title
     text {
       value
     }

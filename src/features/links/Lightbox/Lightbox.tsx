@@ -54,7 +54,7 @@ export const Lightbox = ({
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <div className={styles.lightboxModalWrapper}>
-            <h2 className={styles.title}>{data?.title}</h2>
+            <h3 className={styles.title}>{data?.title}</h3>
             <div className={styles.line}></div>
             <DatoStructuredText data={data?.text} />
           </div>

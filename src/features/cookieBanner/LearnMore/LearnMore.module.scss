@@ -2,8 +2,13 @@
 
 .learnMoreWrapper {
   padding: 2em;
+  pointer-events: all;
   font-size: var(--fs-18);
+  width: 100vw;
+  max-width: calc(83ch + 2 * var(--gtr-72));
+  box-sizing: border-box;
   > p {
     line-height: 1.5em;
+    margin: 0;
   }
 }

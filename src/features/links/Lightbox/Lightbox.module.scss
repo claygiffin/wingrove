@@ -1,11 +1,17 @@
 @use '@/theme/mixins' as *;
 
 .lightboxModalWrapper {
-  padding: 0.5em;
+  pointer-events: all;
+  font-size: var(--fs-18);
+  width: 100vw;
+  max-width: calc(83ch + 2 * var(--gtr-72));
+  box-sizing: border-box;
+  padding: var(--gtr-36) var(--gtr-72);
   .title {
     font-size: var(--fs-48);
     color: var(--color-blueDark);
-    margin: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0;
     font-weight: 400;
     em {
       display: block;
@@ -14,13 +20,13 @@
   }
   .line {
     border: 2px solid var(--color-orange);
-    margin: 0.3em 0;
+    margin: 1em 0;
     width: 10%;
   }
   p, li, ul {
     margin: 0;
     margin-bottom: 0.5em;
-    line-height: 1.5;
+    line-height: 2;
     font-size: var(--fs-18);
     &:last-child {
       margin-bottom: 0;

@@ -1,9 +1,14 @@
 @use '@/theme/mixins' as *;
 
 .privacyPolicy {
-  padding: 2em;
+  pointer-events: all;
+  font-size: var(--fs-18);
+  width: 100vw;
+  max-width: calc(83ch + 2 * var(--gtr-72));
+  box-sizing: border-box;
+  padding: var(--gtr-36) var(--gtr-72);
   .heading {
-    margin: 0;
+    margin-top: 1em;
     margin-bottom: 0.5em;
     font-size: var(--fs-36);
     color: var(--color-blueDark);

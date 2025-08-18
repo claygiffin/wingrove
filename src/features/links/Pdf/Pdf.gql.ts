@@ -5,8 +5,9 @@ export const PdfFragment = gql`
     __typename
     id
     pdf {
+      title
       url
     }
-    linkText
+    pdfLink
   }
 `

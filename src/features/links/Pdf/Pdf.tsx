@@ -19,7 +19,7 @@ export const Pdf = ({ data, iconType, ...props }: Props) => {
       {iconType === 'ARROW_LEFT' && (
         <DatoLinkIcon iconType="ARROW_LEFT" />
       )}
-      <span>{data?.linkText}</span>
+      <span>{data?.pdfLink || data?.pdf?.title}</span>
       {iconType && iconType !== 'ARROW_LEFT' && (
         <DatoLinkIcon iconType={iconType} />
       )}

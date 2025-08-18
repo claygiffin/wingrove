@@ -23,7 +23,9 @@
     margin: 1em 0;
     width: 10%;
   }
-  p, li, ul {
+  p,
+  li,
+  ul {
     margin: 0;
     margin-bottom: 0.5em;
     line-height: 2;
@@ -35,10 +37,10 @@
       font-weight: 600;
     }
     em {
-        strong {
-            font-size: var(--fs-24);
-            font-style: normal;
-        }
+      strong {
+        font-size: var(--fs-24);
+        font-style: normal;
+      }
     }
   }
   hr {

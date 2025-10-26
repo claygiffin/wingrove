@@ -58,6 +58,10 @@ const RootLayout = async ({
             gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''}
           />
           <HubspotTracking />
+          <meta
+            name="google-site-verification"
+            content="VHXvvvMZFvSimoPvk7JpBMXkTNCRVaUYvg7HqD6czXQ"
+          />
         </head>
         <body>
           <Nav data={data.nav} />

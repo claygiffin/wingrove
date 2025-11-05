@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { type ComponentProps, useEffect, useRef, useState } from 'react'
 import type { Metadata } from 'react-datocms'
+import { BiChevronLeft } from 'react-icons/bi'
 
 import { useEscKeyFunction } from '@/hooks/useEscKeyFunction'
 import { classes } from '@/utils/css'
@@ -11,7 +12,7 @@ import styles from './Modal.module.scss'
 
 type Props = ComponentProps<'dialog'> & {
   metaData?: Metadata
-  variant?: 'DEFAULT'
+  variant?: 'DEFAULT' | 'ARTICLE'
   showCloseButton?: boolean
   onClose?: () => void
 }
@@ -108,10 +109,14 @@ export function Modal({
               className={styles.closeButton}
               aria-label="Close Modal"
             >
-              <svg viewBox="0 0 30 30">
-                <path d="M1 1L29 29" />
-                <path d="M29 1L1 29" />
-              </svg>
+              {variant === 'DEFAULT' ? (
+                <svg viewBox="0 0 30 30">
+                  <path d="M1 1L29 29" />
+                  <path d="M29 1L1 29" />
+                </svg>
+              ) : (
+                <BiChevronLeft />
+              )}
             </button>
           )}
           <div className={styles.content}>{children}</div>

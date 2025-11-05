@@ -1,0 +1,48 @@
+@use '@/theme/mixins' as *;
+
+.main {
+  color: black;
+  font-size: var(--fs-72);
+  color: var(--color-blueDark);
+  display: flex;
+  flex-direction: column;
+
+  .titleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-aqua);
+    position: relative;
+
+    .title {
+      font-size: var(--fs-84);
+      line-height: 0.91;
+      z-index: 2;
+
+      @include media('<ms') {
+        font-size: var(--fs-60);
+      }
+    }
+
+    .backgroundLogo {
+      z-index: 1;
+      @include absolute-fill;
+      display: flex;
+      justify-content: flex-end;
+      overflow: hidden;
+      .logoWrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        svg {
+          width: 100%;
+          transform: scale(4);
+          path {
+            fill: #b0e3f3;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '@/theme/mixins' as *;
+
+.container {
+  @include aspect-ratio(var(--aspect-ratio));
+  overflow: hidden;
+  position: relative;
+}
+.player {
+}
+.playIcon {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --transform: translate(-50%, -50%);
+  .container[data-is-playing='true'] & {
+    opacity: 0;
+  }
+}

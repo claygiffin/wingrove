@@ -1,0 +1,105 @@
+@use '@/theme/mixins' as *;
+
+.body {
+  padding: 1.25em 0.75em 1em;
+
+  @include media('<ls') {
+    padding: 0em 0.5em 1em;
+  }
+
+  @include media('<m') {
+    padding: 0.25em 0.5em 1.5em;
+  }
+
+  .itemWrapper {
+    padding: 0.2em 0.2em;
+    border-bottom: 1px solid var(--color-gray);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+      .questionWrapper {
+        .button {
+          .horizontalLine,
+          .verticalLine {
+            background-color: var(--color-orange);
+          }
+        }
+      }
+    }
+
+    .questionWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .question {
+        font-size: var(--fs-30);
+        margin: 0.75em 0;
+        @include media('<ms') {
+          font-size: var(--fs-24);
+        }
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-right: 16px;
+        transition: all 250ms ease-in-out;
+
+        &.active {
+          transform: rotate(45deg);
+        }
+
+        .horizontalLine {
+          position: absolute;
+          width: 2px;
+          height: 32px;
+          background-color: var(--color-blueDark);
+          @include media('<ms') {
+            height: 20px;
+          }
+        }
+
+        .verticalLine {
+          position: absolute;
+          width: 32px;
+          height: 2px;
+          background-color: var(--color-blueDark);
+          @include media('<ms') {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .answerWrapper {
+      height: 0;
+      overflow: hidden;
+
+      &.active {
+        height: fit-content;
+        padding: 0 0.15em 0.25em;
+
+        @include media('<m') {
+          padding: 0.1em 0 0.3em;
+        }
+      }
+
+      > p {
+        width: 80%;
+        font-size: var(--fs-16);
+        font-weight: 400;
+        color: var(--color-grayDark);
+        line-height: 1.5;
+        margin: 0;
+
+        @include media('<ms') {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

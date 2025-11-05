@@ -7,7 +7,10 @@ export const PageLinkFragment = gql`
     linkText
     page {
       __typename
-      ... on HomePageRecord {
+      ... on FaqPageRecord {
+        slug
+      }
+      ... on ArticlesPageRecord {
         slug
       }
     }

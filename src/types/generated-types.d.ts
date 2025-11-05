@@ -51,6 +51,352 @@ type AnchorLinkRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+type ArticleAccordionModelTextField = {
+  __typename?: 'ArticleAccordionModelTextField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+/** Block of type Article Accordion (article_accordion) */
+type ArticleAccordionRecord = RecordInterface & {
+  __typename?: 'ArticleAccordionRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  text: ArticleAccordionModelTextField;
+  title: Scalars['String']['output'];
+};
+
+
+/** Block of type Article Accordion (article_accordion) */
+type ArticleAccordionRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type ArticleButtonFieldModelButtonsField = ExternalLinkRecord | PageLinkRecord;
+
+/** Block of type Article Button (article_button_field) */
+type ArticleButtonFieldRecord = RecordInterface & {
+  __typename?: 'ArticleButtonFieldRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  buttons: Array<ArticleButtonFieldModelButtonsField>;
+  id: Scalars['ItemId']['output'];
+};
+
+
+/** Block of type Article Button (article_button_field) */
+type ArticleButtonFieldRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Block of type Image Carousel (article_carousel) */
+type ArticleCarouselRecord = RecordInterface & {
+  __typename?: 'ArticleCarouselRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  description: Scalars['String']['output'];
+  id: Scalars['ItemId']['output'];
+  images: Array<ImageBlockRecord>;
+};
+
+
+/** Block of type Image Carousel (article_carousel) */
+type ArticleCarouselRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type ArticleCategoryModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<ArticleCategoryModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<ArticleCategoryModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  category?: InputMaybe<StringFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  position?: InputMaybe<PositionFilter>;
+};
+
+enum ArticleCategoryModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  category_ASC = 'category_ASC',
+  category_DESC = 'category_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  position_ASC = 'position_ASC',
+  position_DESC = 'position_DESC'
+}
+
+/** Record of type Article Category (article_category) */
+type ArticleCategoryRecord = RecordInterface & {
+  __typename?: 'ArticleCategoryRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  category: Scalars['String']['output'];
+  id: Scalars['ItemId']['output'];
+  position?: Maybe<Scalars['IntType']['output']>;
+};
+
+
+/** Record of type Article Category (article_category) */
+type ArticleCategoryRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type ArticleModelBodyBlocksField = ArticleAccordionRecord | ArticleButtonFieldRecord | ArticleCarouselRecord | ArticlePullQuoteRecord | ArticleTestimonialRecord | ExternalVideoRecord | HubspotFormRecord | ImageBlockRecord | InternalVideoRecord;
+
+type ArticleModelBodyField = {
+  __typename?: 'ArticleModelBodyField';
+  blocks: Array<ArticleModelBodyBlocksField>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+type ArticleModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<ArticleModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<ArticleModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  body?: InputMaybe<StructuredTextFilter>;
+  category?: InputMaybe<LinkFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  seo?: InputMaybe<SeoFilter>;
+  slug?: InputMaybe<SlugFilter>;
+  thumbnail?: InputMaybe<FileFilter>;
+  title?: InputMaybe<StringFilter>;
+};
+
+enum ArticleModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  title_ASC = 'title_ASC',
+  title_DESC = 'title_DESC'
+}
+
+type ArticlePullQuoteModelQuoteField = {
+  __typename?: 'ArticlePullQuoteModelQuoteField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+/** Block of type Pull Quote (article_pull_quote) */
+type ArticlePullQuoteRecord = RecordInterface & {
+  __typename?: 'ArticlePullQuoteRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  quote: ArticlePullQuoteModelQuoteField;
+};
+
+
+/** Block of type Pull Quote (article_pull_quote) */
+type ArticlePullQuoteRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Record of type Article (article) */
+type ArticleRecord = RecordInterface & {
+  __typename?: 'ArticleRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  body: ArticleModelBodyField;
+  category: ArticleCategoryRecord;
+  id: Scalars['ItemId']['output'];
+  seo?: Maybe<SeoField>;
+  slug: Scalars['String']['output'];
+  thumbnail: ImageFileField;
+  title: Scalars['String']['output'];
+};
+
+
+/** Record of type Article (article) */
+type ArticleRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type ArticleTestimonialModelTestimonialBodyField = {
+  __typename?: 'ArticleTestimonialModelTestimonialBodyField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+/** Block of type Testimonial Box (article_testimonial) */
+type ArticleTestimonialRecord = RecordInterface & {
+  __typename?: 'ArticleTestimonialRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  customerName: Scalars['String']['output'];
+  customerPhoto?: Maybe<FileField>;
+  id: Scalars['ItemId']['output'];
+  testimonialBody: ArticleTestimonialModelTestimonialBodyField;
+};
+
+
+/** Block of type Testimonial Box (article_testimonial) */
+type ArticleTestimonialRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Record of type Articles Page (articles_page) */
+type ArticlesPageRecord = RecordInterface & {
+  __typename?: 'ArticlesPageRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  seo?: Maybe<SeoField>;
+  slug: Scalars['String']['output'];
+  title: Scalars['String']['output'];
+};
+
+
+/** Record of type Articles Page (articles_page) */
+type ArticlesPageRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Specifies how to filter Boolean fields */
+type BooleanFilter = {
+  /** Search for records with an exact match */
+  eq?: InputMaybe<Scalars['BooleanType']['input']>;
+};
+
 type CollectionMetadata = {
   __typename?: 'CollectionMetadata';
   count: Scalars['IntType']['output'];
@@ -81,6 +427,24 @@ type ColorField = {
   red: Scalars['IntType']['output'];
 };
 
+/** Specifies how to filter by creation datetime */
+type CreatedAtFilter = {
+  /** Filter records with a value that's within the specified minute range. Seconds and milliseconds are truncated from the argument. */
+  eq?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records with a value that's strictly greater than the one specified. Seconds and milliseconds are truncated from the argument. */
+  gt?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's greater than or equal to than the one specified. Seconds and milliseconds are truncated from the argument. */
+  gte?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's less than the one specified. Seconds and milliseconds are truncated from the argument. */
+  lt?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's less or equal than the one specified. Seconds and milliseconds are truncated from the argument. */
+  lte?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's outside the specified minute range. Seconds and milliseconds are truncated from the argument. */
+  neq?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
 /** Block of type Email Link (email_link) */
 type EmailLinkRecord = RecordInterface & {
   __typename?: 'EmailLinkRecord';
@@ -104,6 +468,83 @@ type EmailLinkRecord = RecordInterface & {
 
 /** Block of type Email Link (email_link) */
 type EmailLinkRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type ExternalArticleModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<ExternalArticleModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<ExternalArticleModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  category?: InputMaybe<LinkFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  publisherName?: InputMaybe<StringFilter>;
+  seo?: InputMaybe<SeoFilter>;
+  slug?: InputMaybe<SlugFilter>;
+  thumbnail?: InputMaybe<FileFilter>;
+  title?: InputMaybe<StringFilter>;
+};
+
+enum ExternalArticleModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  publisherName_ASC = 'publisherName_ASC',
+  publisherName_DESC = 'publisherName_DESC',
+  title_ASC = 'title_ASC',
+  title_DESC = 'title_DESC'
+}
+
+/** Record of type External Article (external_article) */
+type ExternalArticleRecord = RecordInterface & {
+  __typename?: 'ExternalArticleRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  category: ArticleCategoryRecord;
+  externalUrl: ExternalLinkRecord;
+  id: Scalars['ItemId']['output'];
+  publisherName?: Maybe<Scalars['String']['output']>;
+  seo?: Maybe<SeoField>;
+  slug: Scalars['String']['output'];
+  thumbnail: ImageFileField;
+  title: Scalars['String']['output'];
+};
+
+
+/** Record of type External Article (external_article) */
+type ExternalArticleRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
@@ -131,6 +572,135 @@ type ExternalLinkRecord = RecordInterface & {
 
 /** Block of type External Link (external_link) */
 type ExternalLinkRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Block of type Video - External (external_video) */
+type ExternalVideoRecord = RecordInterface & {
+  __typename?: 'ExternalVideoRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  video: VideoField;
+};
+
+
+/** Block of type Video - External (external_video) */
+type ExternalVideoRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type FaqItemModelAnswerField = {
+  __typename?: 'FaqItemModelAnswerField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+type FaqItemModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<FaqItemModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<FaqItemModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  answer?: InputMaybe<StructuredTextFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  question?: InputMaybe<StringFilter>;
+};
+
+enum FaqItemModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  question_ASC = 'question_ASC',
+  question_DESC = 'question_DESC'
+}
+
+/** Record of type FAQ Item (faq_item) */
+type FaqItemRecord = RecordInterface & {
+  __typename?: 'FaqItemRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  answer: FaqItemModelAnswerField;
+  id: Scalars['ItemId']['output'];
+  question: Scalars['String']['output'];
+};
+
+
+/** Record of type FAQ Item (faq_item) */
+type FaqItemRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Record of type FAQ Page (faq_page) */
+type FaqPageRecord = RecordInterface & {
+  __typename?: 'FaqPageRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  items: Array<FaqItemRecord>;
+  seo?: Maybe<SeoField>;
+  slug: Scalars['String']['output'];
+  title: Scalars['String']['output'];
+};
+
+
+/** Record of type FAQ Page (faq_page) */
+type FaqPageRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
@@ -297,6 +867,20 @@ type FileFieldInterfaceurlArgs = {
   imgixParams?: InputMaybe<ImgixParams>;
 };
 
+/** Specifies how to filter Single-file/image fields */
+type FileFilter = {
+  /** Search for records with an exact match. The specified value must be an Upload ID */
+  eq?: InputMaybe<Scalars['UploadId']['input']>;
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records that have one of the specified uploads */
+  in?: InputMaybe<Array<InputMaybe<Scalars['UploadId']['input']>>>;
+  /** Exclude records with an exact match. The specified value must be an Upload ID */
+  neq?: InputMaybe<Scalars['UploadId']['input']>;
+  /** Filter records that do not have one of the specified uploads */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['UploadId']['input']>>>;
+};
+
 type FooterModelFooterLinksField = AnchorLinkRecord | KeepMePostedLinkRecord | PageLinkRecord;
 
 /** Record of type Footer (footer) */
@@ -416,6 +1000,139 @@ type HomePageRecord = RecordInterface & {
 /** Record of type Home Page (home_page) */
 type HomePageRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
+};
+
+/** Block of type Hubspot Form (hubspot_form) */
+type HubspotFormRecord = RecordInterface & {
+  __typename?: 'HubspotFormRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  formId: Scalars['String']['output'];
+  id: Scalars['ItemId']['output'];
+  portalId: Scalars['String']['output'];
+  region: Scalars['String']['output'];
+};
+
+
+/** Block of type Hubspot Form (hubspot_form) */
+type HubspotFormRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Block of type Image Block (image_block) */
+type ImageBlockRecord = RecordInterface & {
+  __typename?: 'ImageBlockRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  image: ImageFileField;
+};
+
+
+/** Block of type Image Block (image_block) */
+type ImageBlockRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type ImageFileField = FileFieldInterface & {
+  __typename?: 'ImageFileField';
+  _createdAt: Scalars['DateTime']['output'];
+  /** The DatoCMS URL where you can edit this entity. To use this field, you need to set a X-Base-Editing-Url header in the request */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  alt?: Maybe<Scalars['String']['output']>;
+  author?: Maybe<Scalars['String']['output']>;
+  basename: Scalars['String']['output'];
+  blurUpThumb?: Maybe<Scalars['String']['output']>;
+  blurhash?: Maybe<Scalars['String']['output']>;
+  colors: Array<ColorField>;
+  copyright?: Maybe<Scalars['String']['output']>;
+  customData: Scalars['CustomData']['output'];
+  exifInfo: Scalars['CustomData']['output'];
+  filename: Scalars['String']['output'];
+  focalPoint: focalPoint;
+  format: Scalars['String']['output'];
+  height: Scalars['IntType']['output'];
+  id: Scalars['UploadId']['output'];
+  md5: Scalars['String']['output'];
+  mimeType: Scalars['String']['output'];
+  notes?: Maybe<Scalars['String']['output']>;
+  responsiveImage: ResponsiveImage;
+  size: Scalars['IntType']['output'];
+  smartTags: Array<Scalars['String']['output']>;
+  tags: Array<Scalars['String']['output']>;
+  thumbhash?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  url: Scalars['String']['output'];
+  video?: Maybe<UploadVideoField>;
+  width: Scalars['IntType']['output'];
+};
+
+
+type ImageFileFieldaltArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type ImageFileFieldblurUpThumbArgs = {
+  imgixParams?: InputMaybe<ImgixParams>;
+  punch?: Scalars['Float']['input'];
+  quality?: Scalars['Int']['input'];
+  size?: Scalars['Int']['input'];
+};
+
+
+type ImageFileFieldcustomDataArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type ImageFileFieldfocalPointArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type ImageFileFieldresponsiveImageArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  imgixParams?: InputMaybe<ImgixParams>;
+  locale?: InputMaybe<SiteLocale>;
+  sizes?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+type ImageFileFieldtitleArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type ImageFileFieldurlArgs = {
+  imgixParams?: InputMaybe<ImgixParams>;
 };
 
 type ImgixParams = {
@@ -2218,6 +2935,44 @@ type InUseFilter = {
   eq?: InputMaybe<Scalars['BooleanType']['input']>;
 };
 
+/** Block of type Video - Internal (internal_video) */
+type InternalVideoRecord = RecordInterface & {
+  __typename?: 'InternalVideoRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  video: VideoFileField;
+};
+
+
+/** Block of type Video - Internal (internal_video) */
+type InternalVideoRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Specifies how to filter by ID */
+type ItemIdFilter = {
+  /** Search the record with the specified ID */
+  eq?: InputMaybe<Scalars['ItemId']['input']>;
+  /** Search records with the specified IDs */
+  in?: InputMaybe<Array<InputMaybe<Scalars['ItemId']['input']>>>;
+  /** Exclude the record with the specified ID */
+  neq?: InputMaybe<Scalars['ItemId']['input']>;
+  /** Search records that do not have the specified IDs */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ItemId']['input']>>>;
+};
+
 enum ItemStatus {
   draft = 'draft',
   published = 'published',
@@ -2286,13 +3041,27 @@ type LightboxRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+/** Specifies how to filter Single-link fields */
+type LinkFilter = {
+  /** Search for records with an exact match. The specified value must be a Record ID */
+  eq?: InputMaybe<Scalars['ItemId']['input']>;
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records linked to one of the specified records */
+  in?: InputMaybe<Array<InputMaybe<Scalars['ItemId']['input']>>>;
+  /** Exclude records with an exact match. The specified value must be a Record ID */
+  neq?: InputMaybe<Scalars['ItemId']['input']>;
+  /** Filter records not linked to one of the specified records */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['ItemId']['input']>>>;
+};
+
 enum MuxThumbnailFormatType {
   gif = 'gif',
   jpg = 'jpg',
   png = 'png'
 }
 
-type NavModelLinksField = AnchorLinkRecord | KeepMePostedLinkRecord;
+type NavModelLinksField = AnchorLinkRecord | KeepMePostedLinkRecord | PageLinkRecord;
 
 /** Record of type Nav (nav) */
 type NavRecord = RecordInterface & {
@@ -2328,6 +3097,8 @@ type OrientationFilter = {
   neq?: InputMaybe<UploadOrientation>;
 };
 
+type PageLinkModelPageField = ArticlesPageRecord | FaqPageRecord | HomePageRecord;
+
 /** Block of type Page Link (page_link) */
 type PageLinkRecord = RecordInterface & {
   __typename?: 'PageLinkRecord';
@@ -2346,12 +3117,85 @@ type PageLinkRecord = RecordInterface & {
   _updatedAt: Scalars['DateTime']['output'];
   id: Scalars['ItemId']['output'];
   linkText: Scalars['String']['output'];
-  page: HomePageRecord;
+  page: PageLinkModelPageField;
 };
 
 
 /** Block of type Page Link (page_link) */
 type PageLinkRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type PdfArticleModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<PdfArticleModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<PdfArticleModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  category?: InputMaybe<LinkFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  seo?: InputMaybe<SeoFilter>;
+  slug?: InputMaybe<SlugFilter>;
+  thumbnail?: InputMaybe<FileFilter>;
+  title?: InputMaybe<StringFilter>;
+};
+
+enum PdfArticleModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  title_ASC = 'title_ASC',
+  title_DESC = 'title_DESC'
+}
+
+/** Record of type PDF Article (pdf_article) */
+type PdfArticleRecord = RecordInterface & {
+  __typename?: 'PdfArticleRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  category: ArticleCategoryRecord;
+  documentFile: PdfRecord;
+  id: Scalars['ItemId']['output'];
+  seo?: Maybe<SeoField>;
+  slug: Scalars['String']['output'];
+  thumbnail: ImageFileField;
+  title: Scalars['String']['output'];
+};
+
+
+/** Record of type PDF Article (pdf_article) */
+type PdfArticleRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
@@ -2380,6 +3224,22 @@ type PdfRecord = RecordInterface & {
 /** Block of type PDF (pdf) */
 type PdfRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
+};
+
+/** Specifies how to filter by position (sorted and tree-like collections) */
+type PositionFilter = {
+  /** Search for records with an exact match */
+  eq?: InputMaybe<Scalars['IntType']['input']>;
+  /** Filter records with a value that's strictly greater than the one specified */
+  gt?: InputMaybe<Scalars['IntType']['input']>;
+  /** Filter records with a value that's greater than or equal to the one specified */
+  gte?: InputMaybe<Scalars['IntType']['input']>;
+  /** Filter records with a value that's less than the one specified */
+  lt?: InputMaybe<Scalars['IntType']['input']>;
+  /** Filter records with a value that's less or equal than the one specified */
+  lte?: InputMaybe<Scalars['IntType']['input']>;
+  /** Exclude records with an exact match */
+  neq?: InputMaybe<Scalars['IntType']['input']>;
 };
 
 type PrivacyPolicyModelPrivacyPolicyTextField = {
@@ -2417,25 +3277,112 @@ type PrivacyPolicyRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+/** Specifies how to filter by publication datetime */
+type PublishedAtFilter = {
+  /** Filter records with a value that's within the specified minute range. Seconds and milliseconds are truncated from the argument. */
+  eq?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records with a value that's strictly greater than the one specified. Seconds and milliseconds are truncated from the argument. */
+  gt?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's greater than or equal to than the one specified. Seconds and milliseconds are truncated from the argument. */
+  gte?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's less than the one specified. Seconds and milliseconds are truncated from the argument. */
+  lt?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's less or equal than the one specified. Seconds and milliseconds are truncated from the argument. */
+  lte?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's outside the specified minute range. Seconds and milliseconds are truncated from the argument. */
+  neq?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
 /** The query root for this schema */
 type Query = {
   __typename?: 'Query';
+  /** Returns meta information regarding a record collection */
+  _allArticleCategoriesMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allArticlesMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allExternalArticlesMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allFaqItemsMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allPdfArticlesMeta: CollectionMetadata;
   /** Returns meta information regarding an assets collection */
   _allUploadsMeta: CollectionMetadata;
   /** Returns the single instance record */
   _site: Site;
+  /** Returns a collection of records */
+  allArticleCategories: Array<ArticleCategoryRecord>;
+  /** Returns a collection of records */
+  allArticles: Array<ArticleRecord>;
+  /** Returns a collection of records */
+  allExternalArticles: Array<ExternalArticleRecord>;
+  /** Returns a collection of records */
+  allFaqItems: Array<FaqItemRecord>;
+  /** Returns a collection of records */
+  allPdfArticles: Array<PdfArticleRecord>;
   /** Returns a collection of assets */
   allUploads: Array<FileField>;
+  /** Returns a specific record */
+  article?: Maybe<ArticleRecord>;
+  /** Returns a specific record */
+  articleCategory?: Maybe<ArticleCategoryRecord>;
+  /** Returns the single instance record */
+  articlesPage?: Maybe<ArticlesPageRecord>;
+  /** Returns a specific record */
+  externalArticle?: Maybe<ExternalArticleRecord>;
+  /** Returns a specific record */
+  faqItem?: Maybe<FaqItemRecord>;
+  /** Returns the single instance record */
+  faqPage?: Maybe<FaqPageRecord>;
   /** Returns the single instance record */
   footer?: Maybe<FooterRecord>;
   /** Returns the single instance record */
   homePage?: Maybe<HomePageRecord>;
   /** Returns the single instance record */
   nav?: Maybe<NavRecord>;
+  /** Returns a specific record */
+  pdfArticle?: Maybe<PdfArticleRecord>;
   /** Returns the single instance record */
   privacyPolicy?: Maybe<PrivacyPolicyRecord>;
   /** Returns a specific asset */
   upload?: Maybe<FileField>;
+};
+
+
+/** The query root for this schema */
+type Query_allArticleCategoriesMetaArgs = {
+  filter?: InputMaybe<ArticleCategoryModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allArticlesMetaArgs = {
+  filter?: InputMaybe<ArticleModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allExternalArticlesMetaArgs = {
+  filter?: InputMaybe<ExternalArticleModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allFaqItemsMetaArgs = {
+  filter?: InputMaybe<FaqItemModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allPdfArticlesMetaArgs = {
+  filter?: InputMaybe<PdfArticleModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
 };
 
 
@@ -2454,6 +3401,61 @@ type Query_siteArgs = {
 
 
 /** The query root for this schema */
+type QueryallArticleCategoriesArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<ArticleCategoryModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<ArticleCategoryModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallArticlesArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<ArticleModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<ArticleModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallExternalArticlesArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<ExternalArticleModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<ExternalArticleModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallFaqItemsArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqItemModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqItemModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallPdfArticlesArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<PdfArticleModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<PdfArticleModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
 type QueryallUploadsArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   filter?: InputMaybe<UploadFilter>;
@@ -2461,6 +3463,56 @@ type QueryallUploadsArgs = {
   locale?: InputMaybe<SiteLocale>;
   orderBy?: InputMaybe<Array<InputMaybe<UploadOrderBy>>>;
   skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryarticleArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<ArticleModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<ArticleModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryarticleCategoryArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<ArticleCategoryModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<ArticleCategoryModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryarticlesPageArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type QueryexternalArticleArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<ExternalArticleModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<ExternalArticleModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryfaqItemArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqItemModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqItemModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryfaqPageArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
 };
 
 
@@ -2482,6 +3534,15 @@ type QueryhomePageArgs = {
 type QuerynavArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type QuerypdfArticleArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<PdfArticleModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<PdfArticleModelOrderBy>>>;
 };
 
 
@@ -2565,6 +3626,12 @@ type SeoField = {
   twitterCard?: Maybe<Scalars['String']['output']>;
 };
 
+/** Specifies how to filter SEO meta tags fields */
+type SeoFilter = {
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+};
+
 type Site = {
   __typename?: 'Site';
   favicon?: Maybe<FileField>;
@@ -2589,10 +3656,70 @@ enum SiteLocale {
   en = 'en'
 }
 
+/** Specifies how to filter Slug fields */
+type SlugFilter = {
+  /** Search for records with an exact match */
+  eq?: InputMaybe<Scalars['String']['input']>;
+  /** Filter records that have one of the specified slugs */
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Exclude records with an exact match */
+  neq?: InputMaybe<Scalars['String']['input']>;
+  /** Filter records that do have one of the specified slugs */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+/** Specifies how to filter by status */
+type StatusFilter = {
+  /** Search the record with the specified status */
+  eq?: InputMaybe<ItemStatus>;
+  /** Search records with the specified statuses */
+  in?: InputMaybe<Array<InputMaybe<ItemStatus>>>;
+  /** Exclude the record with the specified status */
+  neq?: InputMaybe<ItemStatus>;
+  /** Search records without the specified statuses */
+  notIn?: InputMaybe<Array<InputMaybe<ItemStatus>>>;
+};
+
+/** Specifies how to filter Single-line string fields */
+type StringFilter = {
+  /** Search for records with an exact match */
+  eq?: InputMaybe<Scalars['String']['input']>;
+  /** Filter records with the specified field defined (i.e. with any value) or not [DEPRECATED] */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records that equal one of the specified values */
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Filter records with the specified field set as blank (null or empty string) */
+  isBlank?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records with the specified field present (neither null, nor empty string) */
+  isPresent?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records based on a regular expression */
+  matches?: InputMaybe<StringMatchesFilter>;
+  /** Exclude records with an exact match */
+  neq?: InputMaybe<Scalars['String']['input']>;
+  /** Filter records that do not equal one of the specified values */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Exclude records based on a regular expression */
+  notMatches?: InputMaybe<StringMatchesFilter>;
+};
+
 type StringMatchesFilter = {
   caseSensitive?: InputMaybe<Scalars['BooleanType']['input']>;
   pattern: Scalars['String']['input'];
   regexp?: InputMaybe<Scalars['BooleanType']['input']>;
+};
+
+/** Specifies how to filter Structured Text fields values */
+type StructuredTextFilter = {
+  /** Filter records with the specified field defined (i.e. with any value) or not [DEPRECATED] */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records with the specified field set as blank (null or single empty paragraph) */
+  isBlank?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records with the specified field present (neither null, nor empty string) */
+  isPresent?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records based on a regular expression */
+  matches?: InputMaybe<StringMatchesFilter>;
+  /** Exclude records based on a regular expression */
+  notMatches?: InputMaybe<StringMatchesFilter>;
 };
 
 type Tag = {
@@ -2612,6 +3739,24 @@ type TypeFilter = {
   neq?: InputMaybe<UploadType>;
   /** Search uploads without the specified types */
   notIn?: InputMaybe<Array<InputMaybe<UploadType>>>;
+};
+
+/** Specifies how to filter by update datetime */
+type UpdatedAtFilter = {
+  /** Filter records with a value that's within the specified minute range. Seconds and milliseconds are truncated from the argument. */
+  eq?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
+  /** Filter records with a value that's strictly greater than the one specified. Seconds and milliseconds are truncated from the argument. */
+  gt?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's greater than or equal to than the one specified. Seconds and milliseconds are truncated from the argument. */
+  gte?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's less than the one specified. Seconds and milliseconds are truncated from the argument. */
+  lt?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's less or equal than the one specified. Seconds and milliseconds are truncated from the argument. */
+  lte?: InputMaybe<Scalars['DateTime']['input']>;
+  /** Filter records with a value that's outside the specified minute range. Seconds and milliseconds are truncated from the argument. */
+  neq?: InputMaybe<Scalars['DateTime']['input']>;
 };
 
 /** Specifies how to filter by default alt */
@@ -2971,6 +4116,96 @@ type UploadWidthFilter = {
   neq?: InputMaybe<Scalars['IntType']['input']>;
 };
 
+type VideoField = {
+  __typename?: 'VideoField';
+  height: Scalars['IntType']['output'];
+  provider: Scalars['String']['output'];
+  providerUid: Scalars['String']['output'];
+  thumbnailUrl: Scalars['String']['output'];
+  title: Scalars['String']['output'];
+  url: Scalars['String']['output'];
+  width: Scalars['IntType']['output'];
+};
+
+type VideoFileField = FileFieldInterface & {
+  __typename?: 'VideoFileField';
+  _createdAt: Scalars['DateTime']['output'];
+  /** The DatoCMS URL where you can edit this entity. To use this field, you need to set a X-Base-Editing-Url header in the request */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  alt?: Maybe<Scalars['String']['output']>;
+  author?: Maybe<Scalars['String']['output']>;
+  basename: Scalars['String']['output'];
+  blurUpThumb?: Maybe<Scalars['String']['output']>;
+  blurhash?: Maybe<Scalars['String']['output']>;
+  colors: Array<ColorField>;
+  copyright?: Maybe<Scalars['String']['output']>;
+  customData: Scalars['CustomData']['output'];
+  exifInfo: Scalars['CustomData']['output'];
+  filename: Scalars['String']['output'];
+  focalPoint?: Maybe<focalPoint>;
+  format: Scalars['String']['output'];
+  height: Scalars['IntType']['output'];
+  id: Scalars['UploadId']['output'];
+  md5: Scalars['String']['output'];
+  mimeType: Scalars['String']['output'];
+  notes?: Maybe<Scalars['String']['output']>;
+  responsiveImage?: Maybe<ResponsiveImage>;
+  size: Scalars['IntType']['output'];
+  smartTags: Array<Scalars['String']['output']>;
+  tags: Array<Scalars['String']['output']>;
+  thumbhash?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  url: Scalars['String']['output'];
+  video: UploadVideoField;
+  width: Scalars['IntType']['output'];
+};
+
+
+type VideoFileFieldaltArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type VideoFileFieldblurUpThumbArgs = {
+  imgixParams?: InputMaybe<ImgixParams>;
+  punch?: Scalars['Float']['input'];
+  quality?: Scalars['Int']['input'];
+  size?: Scalars['Int']['input'];
+};
+
+
+type VideoFileFieldcustomDataArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type VideoFileFieldfocalPointArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type VideoFileFieldresponsiveImageArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  imgixParams?: InputMaybe<ImgixParams>;
+  locale?: InputMaybe<SiteLocale>;
+  sizes?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+type VideoFileFieldtitleArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+type VideoFileFieldurlArgs = {
+  imgixParams?: InputMaybe<ImgixParams>;
+};
+
 enum VideoMp4Res {
   high = 'high',
   low = 'low',
@@ -2986,14 +4221,76 @@ type focalPoint = {
 type HomePageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type HomePageQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePageRecord', heroHeading: string, welcomeHeading: string, schoolTitle: string, schoolHeading: string, campusTitle: string, campusHeading: string, visionariesTitle: string, visionariesHeading: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, heroImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, welcomeBody?: { __typename?: 'HomePageModelWelcomeBodyField', value: unknown } | null, welcomeImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'LightboxRecord', id: string, title: string, linkText: string, text: { __typename?: 'LightboxModelTextField', value: unknown } } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } } | { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, campusBody?: { __typename?: 'HomePageModelCampusBodyField', value: unknown } | null, campusImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, visionariesBody?: { __typename?: 'HomePageModelVisionariesBodyField', value: unknown } | null, visionariesImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | null };
+type HomePageQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePageRecord', heroHeading: string, welcomeHeading: string, schoolTitle: string, schoolHeading: string, campusTitle: string, campusHeading: string, visionariesTitle: string, visionariesHeading: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, heroImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, welcomeBody?: { __typename?: 'HomePageModelWelcomeBodyField', value: unknown } | null, welcomeImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'LightboxRecord', id: string, title: string, linkText: string, text: { __typename?: 'LightboxModelTextField', value: unknown } } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } } | { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }>, campusBody?: { __typename?: 'HomePageModelCampusBodyField', value: unknown } | null, campusImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null, visionariesBody?: { __typename?: 'HomePageModelVisionariesBodyField', value: unknown } | null, visionariesImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | null };
+
+type AllArticleModalQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AllArticleModalQuery = { __typename?: 'Query', allArticles: Array<{ __typename?: 'ArticleRecord', slug: string }> };
+
+type ArticleModalQueryVariables = Exact<{
+  slug: Scalars['String']['input'];
+}>;
+
+
+type ArticleModalQuery = { __typename?: 'Query', article?: { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } } } | null };
+
+type AllArticlePageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AllArticlePageQuery = { __typename?: 'Query', allArticles: Array<{ __typename?: 'ArticleRecord', slug: string }> };
+
+type ArticlePageQueryVariables = Exact<{
+  slug: Scalars['String']['input'];
+}>;
+
+
+type ArticlePageQuery = { __typename?: 'Query', article?: { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } } } | null };
+
+type ArticlesPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type ArticlesPageQuery = { __typename?: 'Query', articlesPage?: { __typename?: 'ArticlesPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }> } | null, allArticles: Array<{ __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allPdfArticles: Array<{ __typename: 'PdfArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, documentFile: { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allExternalArticles: Array<{ __typename: 'ExternalArticleRecord', id: string, title: string, publisherName?: string | null, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, externalUrl: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allArticleCategories: Array<{ __typename: 'ArticleCategoryRecord', id: string, category: string }> };
+
+type FaqPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type FaqPageQuery = { __typename?: 'Query', faqPage?: { __typename?: 'FaqPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, items: Array<{ __typename?: 'FaqItemRecord', question: string, answer: { __typename?: 'FaqItemModelAnswerField', value: unknown } }> } | null };
 
 type RootLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type RootLayoutQuery = { __typename?: 'Query', nav?: { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> } | null, footer?: { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } } | null, privacyPolicy?: { __typename: 'PrivacyPolicyRecord', id: string, privacyPolicyHeading: string, privacyPolicyText: { __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField', value: unknown } } | null };
+type RootLayoutQuery = { __typename?: 'Query', nav?: { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | null, footer?: { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } } | null, privacyPolicy?: { __typename: 'PrivacyPolicyRecord', id: string, privacyPolicyHeading: string, privacyPolicyText: { __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField', value: unknown } } | null };
+
+type ExternalVideoFragment = { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } };
+
+type InternalVideoFragment = { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } };
+
+type HubspotFormFragment = { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null };
+
+type ArticleCarouselFragment = { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> };
+
+type ArticleAccordionFragment = { __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } };
+
+type ArticleButtonFieldFragment = { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> };
+
+type ArticlePullQuoteFragment = { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } };
+
+type ArticleTestimonialFragment = { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null };
+
+type ArticleCategoryFragment = { __typename: 'ArticleCategoryRecord', id: string, category: string };
+
+type ArticleFragment = { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
+
+type PdfArticleFragment = { __typename: 'PdfArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, documentFile: { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
+
+type ExternalArticleFragment = { __typename: 'ExternalArticleRecord', id: string, title: string, publisherName?: string | null, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, externalUrl: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
+
+type ArticlesBodyFragment = { __typename?: 'ArticlesPageRecord', slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
 
 type ResponsiveImageFragment = { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null };
+
+type FaqBodyFragment = { __typename?: 'FaqPageRecord', items: Array<{ __typename?: 'FaqItemRecord', question: string, answer: { __typename?: 'FaqItemModelAnswerField', value: unknown } }> };
 
 type HomeCampusFragment = { __typename?: 'HomePageRecord', campusTitle: string, campusHeading: string, campusBody?: { __typename?: 'HomePageModelCampusBodyField', value: unknown } | null, campusImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null };
 
@@ -3001,7 +4298,7 @@ type HomeHeroFragment = { __typename?: 'HomePageRecord', heroHeading: string, he
 
 type HomeHeroImagesFragment = { __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null };
 
-type HomeSchoolFragment = { __typename?: 'HomePageRecord', schoolTitle: string, schoolHeading: string, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'LightboxRecord', id: string, title: string, linkText: string, text: { __typename?: 'LightboxModelTextField', value: unknown } } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } } | { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }> };
+type HomeSchoolFragment = { __typename?: 'HomePageRecord', schoolTitle: string, schoolHeading: string, schoolBody: { __typename?: 'HomePageModelSchoolBodyField', value: unknown }, schoolLink?: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'LightboxRecord', id: string, title: string, linkText: string, text: { __typename?: 'LightboxModelTextField', value: unknown } } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } } | { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } } | null, schoolImages: Array<{ __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null }> };
 
 type HomeSchoolImagesFragment = { __typename?: 'FileField', horizontal?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, vertical?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null };
 
@@ -3009,9 +4306,9 @@ type HomeVisionariesFragment = { __typename?: 'HomePageRecord', visionariesTitle
 
 type HomeWelcomeFragment = { __typename?: 'HomePageRecord', welcomeHeading: string, welcomeBody?: { __typename?: 'HomePageModelWelcomeBodyField', value: unknown } | null, welcomeImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null };
 
-type FooterFragment = { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } };
+type FooterFragment = { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } };
 
-type NavFragment = { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string }> };
+type NavFragment = { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> };
 
 type AnchorLinkFragment = { __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string };
 
@@ -3023,10 +4320,14 @@ type KeepMePostedLinkFragment = { __typename: 'KeepMePostedLinkRecord', id: stri
 
 type LightboxFragment = { __typename: 'LightboxRecord', id: string, title: string, linkText: string, text: { __typename?: 'LightboxModelTextField', value: unknown } };
 
-type PageLinkFragment = { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'HomePageRecord', slug?: string | null } };
+type PageLinkFragment = { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } };
 
 type PdfFragment = { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } };
 
 type PrivacyPolicyFragment = { __typename: 'PrivacyPolicyRecord', id: string, privacyPolicyHeading: string, privacyPolicyText: { __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField', value: unknown } };
+
+type ExternalVideoFileFragment = { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number };
+
+type InternalVideoFileFragment = { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } };
 
 }

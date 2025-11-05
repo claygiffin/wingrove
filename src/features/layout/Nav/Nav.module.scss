@@ -1,10 +1,7 @@
 @use '@/theme/mixins' as *;
 
 .spacer {
-  height: max(
-    calc(1.5 * var(--fs-24) + 1rem + 3px),
-    calc(var(--fs-15) * 3.5 + 1rem + 3px)
-  );
+  height: max(calc(1.5 * var(--fs-24)), calc(var(--fs-15) * 3.5));
   body:has([data-home]) & {
     height: 0;
   }

@@ -17,9 +17,11 @@ export const AnchorLink = ({
   iconType,
   ...props
 }: AnchorLinkProps) => {
+  const href = data?.href || ''
+
   return (
     <Link
-      href={data?.href || ''}
+      href={`/${href}`}
       {...props}
     >
       {iconType === 'ARROW_LEFT' && (

@@ -3,6 +3,7 @@ import { gql } from 'graphql-tag'
 import {
   AnchorLinkFragment,
   KeepMePostedLinkFragment,
+  PageLinkFragment,
 } from '@/features/links'
 
 export const NavFragment = gql`
@@ -16,8 +17,12 @@ export const NavFragment = gql`
       ... on KeepMePostedLinkRecord {
         ...KeepMePostedLink
       }
+      ... on PageLinkRecord {
+        ...PageLink
+      }
     }
   }
   ${AnchorLinkFragment}
   ${KeepMePostedLinkFragment}
+  ${PageLinkFragment}
 `

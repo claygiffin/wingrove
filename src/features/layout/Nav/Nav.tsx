@@ -71,7 +71,7 @@ export const Nav = ({ data, className, ...props }: Props) => {
                 key={link.id}
                 data={link}
                 onClick={
-                  link.__typename !== 'AnchorLinkRecord'
+                  link.__typename === 'KeepMePostedLinkRecord'
                     ? openContactModal
                     : undefined
                 }

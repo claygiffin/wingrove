@@ -601,17 +601,85 @@ type ExternalVideoRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
-type FaqItemModelAnswerField = {
-  __typename?: 'FaqItemModelAnswerField';
+type FaqCategoryModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<FaqCategoryModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<FaqCategoryModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  category?: InputMaybe<StringFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  position?: InputMaybe<PositionFilter>;
+};
+
+enum FaqCategoryModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  category_ASC = 'category_ASC',
+  category_DESC = 'category_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  position_ASC = 'position_ASC',
+  position_DESC = 'position_DESC'
+}
+
+/** Record of type FAQ Category (faq_category) */
+type FaqCategoryRecord = RecordInterface & {
+  __typename?: 'FaqCategoryRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  category: Scalars['String']['output'];
+  id: Scalars['ItemId']['output'];
+  position?: Maybe<Scalars['IntType']['output']>;
+};
+
+
+/** Record of type FAQ Category (faq_category) */
+type FaqCategoryRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type FaqCommunityModelAnswerField = {
+  __typename?: 'FaqCommunityModelAnswerField';
   blocks: Array<Scalars['String']['output']>;
   inlineBlocks: Array<Scalars['String']['output']>;
   links: Array<Scalars['String']['output']>;
   value: Scalars['JsonField']['output'];
 };
 
-type FaqItemModelFilter = {
-  AND?: InputMaybe<Array<InputMaybe<FaqItemModelFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<FaqItemModelFilter>>>;
+type FaqCommunityModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<FaqCommunityModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<FaqCommunityModelFilter>>>;
   _createdAt?: InputMaybe<CreatedAtFilter>;
   _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
   _isValid?: InputMaybe<BooleanFilter>;
@@ -621,11 +689,12 @@ type FaqItemModelFilter = {
   _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
   _updatedAt?: InputMaybe<UpdatedAtFilter>;
   answer?: InputMaybe<StructuredTextFilter>;
+  category?: InputMaybe<LinkFilter>;
   id?: InputMaybe<ItemIdFilter>;
   question?: InputMaybe<StringFilter>;
 };
 
-enum FaqItemModelOrderBy {
+enum FaqCommunityModelOrderBy {
   _createdAt_ASC = '_createdAt_ASC',
   _createdAt_DESC = '_createdAt_DESC',
   _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
@@ -648,9 +717,9 @@ enum FaqItemModelOrderBy {
   question_DESC = 'question_DESC'
 }
 
-/** Record of type FAQ Item (faq_item) */
-type FaqItemRecord = RecordInterface & {
-  __typename?: 'FaqItemRecord';
+/** Record of type Community (faq_community) */
+type FaqCommunityRecord = RecordInterface & {
+  __typename?: 'FaqCommunityRecord';
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
@@ -664,14 +733,167 @@ type FaqItemRecord = RecordInterface & {
   _status: ItemStatus;
   _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
   _updatedAt: Scalars['DateTime']['output'];
-  answer: FaqItemModelAnswerField;
+  answer: FaqCommunityModelAnswerField;
+  category: FaqCategoryRecord;
   id: Scalars['ItemId']['output'];
   question: Scalars['String']['output'];
 };
 
 
-/** Record of type FAQ Item (faq_item) */
-type FaqItemRecord_seoMetaTagsArgs = {
+/** Record of type Community (faq_community) */
+type FaqCommunityRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type FaqGeneralModelAnswerField = {
+  __typename?: 'FaqGeneralModelAnswerField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+type FaqGeneralModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<FaqGeneralModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<FaqGeneralModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  answer?: InputMaybe<StructuredTextFilter>;
+  category?: InputMaybe<LinkFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  question?: InputMaybe<StringFilter>;
+};
+
+enum FaqGeneralModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  question_ASC = 'question_ASC',
+  question_DESC = 'question_DESC'
+}
+
+/** Record of type General (faq_general) */
+type FaqGeneralRecord = RecordInterface & {
+  __typename?: 'FaqGeneralRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  answer: FaqGeneralModelAnswerField;
+  category: FaqCategoryRecord;
+  id: Scalars['ItemId']['output'];
+  question: Scalars['String']['output'];
+};
+
+
+/** Record of type General (faq_general) */
+type FaqGeneralRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type FaqGovernanceFinancingModelAnswerField = {
+  __typename?: 'FaqGovernanceFinancingModelAnswerField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+type FaqGovernanceFinancingModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<FaqGovernanceFinancingModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<FaqGovernanceFinancingModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  answer?: InputMaybe<StructuredTextFilter>;
+  category?: InputMaybe<LinkFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  question?: InputMaybe<StringFilter>;
+};
+
+enum FaqGovernanceFinancingModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  question_ASC = 'question_ASC',
+  question_DESC = 'question_DESC'
+}
+
+/** Record of type Governance & Financing (faq_governance_financing) */
+type FaqGovernanceFinancingRecord = RecordInterface & {
+  __typename?: 'FaqGovernanceFinancingRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  answer: FaqGovernanceFinancingModelAnswerField;
+  category: FaqCategoryRecord;
+  id: Scalars['ItemId']['output'];
+  question: Scalars['String']['output'];
+};
+
+
+/** Record of type Governance & Financing (faq_governance_financing) */
+type FaqGovernanceFinancingRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
@@ -692,7 +914,6 @@ type FaqPageRecord = RecordInterface & {
   _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
   _updatedAt: Scalars['DateTime']['output'];
   id: Scalars['ItemId']['output'];
-  items: Array<FaqItemRecord>;
   seo?: Maybe<SeoField>;
   slug: Scalars['String']['output'];
   title: Scalars['String']['output'];
@@ -701,6 +922,158 @@ type FaqPageRecord = RecordInterface & {
 
 /** Record of type FAQ Page (faq_page) */
 type FaqPageRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type FaqPartnershipModelAnswerField = {
+  __typename?: 'FaqPartnershipModelAnswerField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+type FaqPartnershipModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<FaqPartnershipModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<FaqPartnershipModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  answer?: InputMaybe<StructuredTextFilter>;
+  category?: InputMaybe<LinkFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  question?: InputMaybe<StringFilter>;
+};
+
+enum FaqPartnershipModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  question_ASC = 'question_ASC',
+  question_DESC = 'question_DESC'
+}
+
+/** Record of type Partnerships (faq_partnership) */
+type FaqPartnershipRecord = RecordInterface & {
+  __typename?: 'FaqPartnershipRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  answer: FaqPartnershipModelAnswerField;
+  category: FaqCategoryRecord;
+  id: Scalars['ItemId']['output'];
+  question: Scalars['String']['output'];
+};
+
+
+/** Record of type Partnerships (faq_partnership) */
+type FaqPartnershipRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type FaqStudentLifeModelAnswerField = {
+  __typename?: 'FaqStudentLifeModelAnswerField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+type FaqStudentLifeModelFilter = {
+  AND?: InputMaybe<Array<InputMaybe<FaqStudentLifeModelFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<FaqStudentLifeModelFilter>>>;
+  _createdAt?: InputMaybe<CreatedAtFilter>;
+  _firstPublishedAt?: InputMaybe<PublishedAtFilter>;
+  _isValid?: InputMaybe<BooleanFilter>;
+  _publicationScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _publishedAt?: InputMaybe<PublishedAtFilter>;
+  _status?: InputMaybe<StatusFilter>;
+  _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
+  _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  answer?: InputMaybe<StructuredTextFilter>;
+  category?: InputMaybe<LinkFilter>;
+  id?: InputMaybe<ItemIdFilter>;
+  question?: InputMaybe<StringFilter>;
+};
+
+enum FaqStudentLifeModelOrderBy {
+  _createdAt_ASC = '_createdAt_ASC',
+  _createdAt_DESC = '_createdAt_DESC',
+  _firstPublishedAt_ASC = '_firstPublishedAt_ASC',
+  _firstPublishedAt_DESC = '_firstPublishedAt_DESC',
+  _isValid_ASC = '_isValid_ASC',
+  _isValid_DESC = '_isValid_DESC',
+  _publicationScheduledAt_ASC = '_publicationScheduledAt_ASC',
+  _publicationScheduledAt_DESC = '_publicationScheduledAt_DESC',
+  _publishedAt_ASC = '_publishedAt_ASC',
+  _publishedAt_DESC = '_publishedAt_DESC',
+  _status_ASC = '_status_ASC',
+  _status_DESC = '_status_DESC',
+  _unpublishingScheduledAt_ASC = '_unpublishingScheduledAt_ASC',
+  _unpublishingScheduledAt_DESC = '_unpublishingScheduledAt_DESC',
+  _updatedAt_ASC = '_updatedAt_ASC',
+  _updatedAt_DESC = '_updatedAt_DESC',
+  id_ASC = 'id_ASC',
+  id_DESC = 'id_DESC',
+  question_ASC = 'question_ASC',
+  question_DESC = 'question_DESC'
+}
+
+/** Record of type Student Life (faq_student_life) */
+type FaqStudentLifeRecord = RecordInterface & {
+  __typename?: 'FaqStudentLifeRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  answer: FaqStudentLifeModelAnswerField;
+  category: FaqCategoryRecord;
+  id: Scalars['ItemId']['output'];
+  question: Scalars['String']['output'];
+};
+
+
+/** Record of type Student Life (faq_student_life) */
+type FaqStudentLifeRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
@@ -3305,7 +3678,17 @@ type Query = {
   /** Returns meta information regarding a record collection */
   _allExternalArticlesMeta: CollectionMetadata;
   /** Returns meta information regarding a record collection */
-  _allFaqItemsMeta: CollectionMetadata;
+  _allFaqCategoriesMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allFaqCommunitiesMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allFaqGeneralsMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allFaqGovernanceFinancingsMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allFaqPartnershipsMeta: CollectionMetadata;
+  /** Returns meta information regarding a record collection */
+  _allFaqStudentLivesMeta: CollectionMetadata;
   /** Returns meta information regarding a record collection */
   _allPdfArticlesMeta: CollectionMetadata;
   /** Returns meta information regarding an assets collection */
@@ -3319,7 +3702,17 @@ type Query = {
   /** Returns a collection of records */
   allExternalArticles: Array<ExternalArticleRecord>;
   /** Returns a collection of records */
-  allFaqItems: Array<FaqItemRecord>;
+  allFaqCategories: Array<FaqCategoryRecord>;
+  /** Returns a collection of records */
+  allFaqCommunities: Array<FaqCommunityRecord>;
+  /** Returns a collection of records */
+  allFaqGenerals: Array<FaqGeneralRecord>;
+  /** Returns a collection of records */
+  allFaqGovernanceFinancings: Array<FaqGovernanceFinancingRecord>;
+  /** Returns a collection of records */
+  allFaqPartnerships: Array<FaqPartnershipRecord>;
+  /** Returns a collection of records */
+  allFaqStudentLives: Array<FaqStudentLifeRecord>;
   /** Returns a collection of records */
   allPdfArticles: Array<PdfArticleRecord>;
   /** Returns a collection of assets */
@@ -3333,9 +3726,19 @@ type Query = {
   /** Returns a specific record */
   externalArticle?: Maybe<ExternalArticleRecord>;
   /** Returns a specific record */
-  faqItem?: Maybe<FaqItemRecord>;
+  faqCategory?: Maybe<FaqCategoryRecord>;
+  /** Returns a specific record */
+  faqCommunity?: Maybe<FaqCommunityRecord>;
+  /** Returns a specific record */
+  faqGeneral?: Maybe<FaqGeneralRecord>;
+  /** Returns a specific record */
+  faqGovernanceFinancing?: Maybe<FaqGovernanceFinancingRecord>;
   /** Returns the single instance record */
   faqPage?: Maybe<FaqPageRecord>;
+  /** Returns a specific record */
+  faqPartnership?: Maybe<FaqPartnershipRecord>;
+  /** Returns a specific record */
+  faqStudentLife?: Maybe<FaqStudentLifeRecord>;
   /** Returns the single instance record */
   footer?: Maybe<FooterRecord>;
   /** Returns the single instance record */
@@ -3373,8 +3776,43 @@ type Query_allExternalArticlesMetaArgs = {
 
 
 /** The query root for this schema */
-type Query_allFaqItemsMetaArgs = {
-  filter?: InputMaybe<FaqItemModelFilter>;
+type Query_allFaqCategoriesMetaArgs = {
+  filter?: InputMaybe<FaqCategoryModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allFaqCommunitiesMetaArgs = {
+  filter?: InputMaybe<FaqCommunityModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allFaqGeneralsMetaArgs = {
+  filter?: InputMaybe<FaqGeneralModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allFaqGovernanceFinancingsMetaArgs = {
+  filter?: InputMaybe<FaqGovernanceFinancingModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allFaqPartnershipsMetaArgs = {
+  filter?: InputMaybe<FaqPartnershipModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type Query_allFaqStudentLivesMetaArgs = {
+  filter?: InputMaybe<FaqStudentLifeModelFilter>;
   locale?: InputMaybe<SiteLocale>;
 };
 
@@ -3434,12 +3872,67 @@ type QueryallExternalArticlesArgs = {
 
 
 /** The query root for this schema */
-type QueryallFaqItemsArgs = {
+type QueryallFaqCategoriesArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
-  filter?: InputMaybe<FaqItemModelFilter>;
+  filter?: InputMaybe<FaqCategoryModelFilter>;
   first?: InputMaybe<Scalars['IntType']['input']>;
   locale?: InputMaybe<SiteLocale>;
-  orderBy?: InputMaybe<Array<InputMaybe<FaqItemModelOrderBy>>>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqCategoryModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallFaqCommunitiesArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqCommunityModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqCommunityModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallFaqGeneralsArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqGeneralModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqGeneralModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallFaqGovernanceFinancingsArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqGovernanceFinancingModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqGovernanceFinancingModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallFaqPartnershipsArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqPartnershipModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqPartnershipModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+};
+
+
+/** The query root for this schema */
+type QueryallFaqStudentLivesArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqStudentLifeModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqStudentLifeModelOrderBy>>>;
   skip?: InputMaybe<Scalars['IntType']['input']>;
 };
 
@@ -3501,11 +3994,38 @@ type QueryexternalArticleArgs = {
 
 
 /** The query root for this schema */
-type QueryfaqItemArgs = {
+type QueryfaqCategoryArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
-  filter?: InputMaybe<FaqItemModelFilter>;
+  filter?: InputMaybe<FaqCategoryModelFilter>;
   locale?: InputMaybe<SiteLocale>;
-  orderBy?: InputMaybe<Array<InputMaybe<FaqItemModelOrderBy>>>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqCategoryModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryfaqCommunityArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqCommunityModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqCommunityModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryfaqGeneralArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqGeneralModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqGeneralModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryfaqGovernanceFinancingArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqGovernanceFinancingModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqGovernanceFinancingModelOrderBy>>>;
 };
 
 
@@ -3513,6 +4033,24 @@ type QueryfaqItemArgs = {
 type QueryfaqPageArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type QueryfaqPartnershipArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqPartnershipModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqPartnershipModelOrderBy>>>;
+};
+
+
+/** The query root for this schema */
+type QueryfaqStudentLifeArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<FaqStudentLifeModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<FaqStudentLifeModelOrderBy>>>;
 };
 
 
@@ -4255,7 +4793,7 @@ type ArticlesPageQuery = { __typename?: 'Query', articlesPage?: { __typename?: '
 type FaqPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type FaqPageQuery = { __typename?: 'Query', faqPage?: { __typename?: 'FaqPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, items: Array<{ __typename?: 'FaqItemRecord', question: string, answer: { __typename?: 'FaqItemModelAnswerField', value: unknown } }> } | null };
+type FaqPageQuery = { __typename?: 'Query', faqPage?: { __typename?: 'FaqPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }> } | null, allFaqCategories: Array<{ __typename: 'FaqCategoryRecord', id: string, category: string }>, allFaqGenerals: Array<{ __typename?: 'FaqGeneralRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGeneralModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqStudentLives: Array<{ __typename?: 'FaqStudentLifeRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqStudentLifeModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqPartnerships: Array<{ __typename?: 'FaqPartnershipRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqPartnershipModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqGovernanceFinancings: Array<{ __typename?: 'FaqGovernanceFinancingRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGovernanceFinancingModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqCommunities: Array<{ __typename?: 'FaqCommunityRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqCommunityModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }> };
 
 type RootLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -4290,7 +4828,17 @@ type ArticlesBodyFragment = { __typename?: 'ArticlesPageRecord', slug: string, _
 
 type ResponsiveImageFragment = { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null };
 
-type FaqBodyFragment = { __typename?: 'FaqPageRecord', items: Array<{ __typename?: 'FaqItemRecord', question: string, answer: { __typename?: 'FaqItemModelAnswerField', value: unknown } }> };
+type FaqCategoryFragment = { __typename: 'FaqCategoryRecord', id: string, category: string };
+
+type FaqGeneralFragment = { __typename?: 'FaqGeneralRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGeneralModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+
+type FaqStudentLifeFragment = { __typename?: 'FaqStudentLifeRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqStudentLifeModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+
+type FaqPartnershipFragment = { __typename?: 'FaqPartnershipRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqPartnershipModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+
+type FaqGovernanceFinancingFragment = { __typename?: 'FaqGovernanceFinancingRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGovernanceFinancingModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+
+type FaqCommunityFragment = { __typename?: 'FaqCommunityRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqCommunityModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
 
 type HomeCampusFragment = { __typename?: 'HomePageRecord', campusTitle: string, campusHeading: string, campusBody?: { __typename?: 'HomePageModelCampusBodyField', value: unknown } | null, campusImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null };
 

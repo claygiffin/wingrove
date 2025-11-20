@@ -1,8 +1,8 @@
 'use client'
 
 import { format } from 'date-fns'
-import { useRouter } from 'next/navigation'
-import { type ComponentProps, useEffect, useState } from 'react'
+import Link from 'next/link'
+import { type ComponentProps, useMemo, useState } from 'react'
 import { BiCaretDown } from 'react-icons/bi'
 
 import { DatoImageFocused } from '@/features/dato-image'
@@ -16,67 +16,82 @@ type Props = ComponentProps<'div'> & {
 export const ArticlesBody = ({ data, ...props }: Props) => {
   const [selectedCategory, setSelectedCategory] =
     useState('All Articles')
-  const [filteredArticles, setFilteredArticles] = useState<Array<any>>(
-    []
-  )
+
   const categories = [
     'All Articles',
     ...(data.allArticleCategories || []).map(
       cat => cat?.category || ''
     ),
   ]
-  const router = useRouter()
 
-  useEffect(() => {
-    if (!data) return
-
-    const allArticles = [
+  const allArticles = useMemo(() => {
+    return [
       ...(data.allArticles || []),
       ...(data.allPdfArticles || []),
       ...(data.allExternalArticles || []),
-    ]
-
-    allArticles.sort((a, b) => {
+    ].sort((a, b) => {
       const dateA = new Date(a?.publishedAt || '').getTime()
       const dateB = new Date(b?.publishedAt || '').getTime()
       return dateB - dateA
     })
+  }, [data])
 
+  const filteredArticles = useMemo(() => {
     if (selectedCategory === 'All Articles') {
-      setFilteredArticles(allArticles)
-    } else {
-      setFilteredArticles(
-        allArticles.filter(article => {
-          return article?.category?.category === selectedCategory
-        })
-      )
+      return allArticles
     }
-  }, [data, selectedCategory])
+    return allArticles.filter(article => {
+      return article?.category?.category === selectedCategory
+    })
+  }, [allArticles, selectedCategory])
 
-  const clickArticle = (article: any) => {
-    switch (article?.__typename) {
-      case 'ArticleRecord':
-        router.push(`/articles/${article?.slug}`)
-        break
-      case 'PdfArticleRecord':
-        window.open(
-          article?.documentFile?.pdf?.url || '',
-          '_blank',
-          'noopener,noreferrer'
-        )
-        break
-      case 'ExternalArticleRecord':
-        window.open(
-          article?.externalUrl?.url || '',
-          '_blank',
-          'noopener,noreferrer'
-        )
-        break
-      default:
-        break
+  type Article =
+    | Queries.ArticleFragment
+    | Queries.PdfArticleFragment
+    | Queries.ExternalArticleFragment
+
+  const getArticleLink = (article: Article) => {
+    switch (article.__typename) {
+      case 'ArticleRecord': {
+        return `/articles/${article.slug}`
+      }
+      case 'ExternalArticleRecord': {
+        return article.externalUrl.url
+      }
+      case 'PdfArticleRecord': {
+        return article.documentFile.pdf.url
+      }
+      default: {
+        return ''
+      }
     }
   }
 
+  const getArticleProps = (article: Article) => {
+    switch (article.__typename) {
+      case 'ArticleRecord': {
+        return { scroll: false }
+      }
+      case 'ExternalArticleRecord':
+      case 'PdfArticleRecord': {
+        return { target: '_blank' }
+      }
+    }
+  }
+
+  const getPublisher = (article: Article) => {
+    switch (article.__typename) {
+      case 'PdfArticleRecord':
+      case 'ArticleRecord': {
+        return
+      }
+      case 'ExternalArticleRecord': {
+        return (
+          <h4 className={styles.publisher}>{article.publisherName}</h4>
+        )
+      }
+    }
+  }
   return (
     <div
       className={styles.body}
@@ -108,10 +123,11 @@ export const ArticlesBody = ({ data, ...props }: Props) => {
       <div className={styles.articlesWrapper}>
         {filteredArticles?.map((article, index) => {
           return (
-            <div
+            <Link
               className={styles.articleCard}
               key={index}
-              onClick={() => clickArticle(article)}
+              href={getArticleLink(article)}
+              {...getArticleProps(article)}
             >
               <DatoImageFocused
                 className={styles.thumbnail}
@@ -131,13 +147,9 @@ export const ArticlesBody = ({ data, ...props }: Props) => {
                   </h4>
                 </div>
                 <h2 className={styles.title}>{article?.title}</h2>
-                {article?.publisherName && (
-                  <h4 className={styles.publisher}>
-                    {article?.publisherName}
-                  </h4>
-                )}
+                {getPublisher(article)}
               </div>
-            </div>
+            </Link>
           )
         })}
       </div>

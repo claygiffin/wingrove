@@ -30,11 +30,11 @@ type AnchorLinkRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -65,11 +65,11 @@ type ArticleAccordionRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -94,11 +94,11 @@ type ArticleButtonFieldRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -120,11 +120,11 @@ type ArticleCarouselRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -188,11 +188,11 @@ type ArticleCategoryRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -276,11 +276,11 @@ type ArticlePullQuoteRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -302,11 +302,11 @@ type ArticleRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -341,11 +341,11 @@ type ArticleTestimonialRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -369,11 +369,11 @@ type ArticlesPageRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -451,11 +451,11 @@ type EmailLinkRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -522,11 +522,11 @@ type ExternalArticleRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -554,11 +554,11 @@ type ExternalLinkRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -581,11 +581,11 @@ type ExternalVideoRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -648,11 +648,11 @@ type FaqCategoryRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -723,11 +723,11 @@ type FaqCommunityRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -799,11 +799,11 @@ type FaqGeneralRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -875,11 +875,11 @@ type FaqGovernanceFinancingRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -903,11 +903,11 @@ type FaqPageRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -979,11 +979,11 @@ type FaqPartnershipRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -1055,11 +1055,11 @@ type FaqStudentLifeRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -1262,11 +1262,11 @@ type FooterRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -1336,11 +1336,11 @@ type HomePageRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -1381,11 +1381,11 @@ type HubspotFormRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -1409,11 +1409,11 @@ type ImageBlockRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3314,11 +3314,11 @@ type InternalVideoRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3358,11 +3358,11 @@ type KeepMePostedLinkRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3392,11 +3392,11 @@ type LightboxRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3442,11 +3442,11 @@ type NavRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3478,11 +3478,11 @@ type PageLinkRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3547,11 +3547,11 @@ type PdfArticleRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3578,11 +3578,11 @@ type PdfRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -3629,11 +3629,11 @@ type PrivacyPolicyRecord = RecordInterface & {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -4103,11 +4103,11 @@ type RecordInterface = {
   _createdAt: Scalars['DateTime']['output'];
   /** Editing URL */
   _editingUrl?: Maybe<Scalars['String']['output']>;
-  _firstPublishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
   _isValid: Scalars['BooleanType']['output'];
   _modelApiKey: Scalars['String']['output'];
   _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
-  _publishedAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
   /** Generates SEO and Social card meta tags to be used in your frontend */
   _seoMetaTags: Array<Tag>;
   _status: ItemStatus;
@@ -4400,6 +4400,7 @@ type UploadFilter = {
   mimeType?: InputMaybe<UploadMimeTypeFilter>;
   notes?: InputMaybe<UploadNotesFilter>;
   orientation?: InputMaybe<OrientationFilter>;
+  path?: InputMaybe<UploadPathFilter>;
   resolution?: InputMaybe<ResolutionFilter>;
   size?: InputMaybe<UploadSizeFilter>;
   smartTags?: InputMaybe<UploadTagsFilter>;
@@ -4513,6 +4514,18 @@ enum UploadOrientation {
   portrait = 'portrait',
   square = 'square'
 }
+
+/** Specifies how to filter by path */
+type UploadPathFilter = {
+  /** Search the asset with the specified path */
+  eq?: InputMaybe<Scalars['String']['input']>;
+  /** Search assets with the specified paths */
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  /** Exclude the asset with the specified path */
+  neq?: InputMaybe<Scalars['String']['input']>;
+  /** Search assets that do not have the specified paths */
+  notIn?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
 
 /** Specifies how to filter by size */
 type UploadSizeFilter = {
@@ -4771,7 +4784,7 @@ type ArticleModalQueryVariables = Exact<{
 }>;
 
 
-type ArticleModalQuery = { __typename?: 'Query', article?: { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } } } | null };
+type ArticleModalQuery = { __typename?: 'Query', article?: { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt: string } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } } } | null };
 
 type AllArticlePageQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -4783,28 +4796,28 @@ type ArticlePageQueryVariables = Exact<{
 }>;
 
 
-type ArticlePageQuery = { __typename?: 'Query', article?: { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } } } | null };
+type ArticlePageQuery = { __typename?: 'Query', article?: { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt: string } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } } } | null };
 
 type ArticlesPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type ArticlesPageQuery = { __typename?: 'Query', articlesPage?: { __typename?: 'ArticlesPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }> } | null, allArticles: Array<{ __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allPdfArticles: Array<{ __typename: 'PdfArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, documentFile: { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allExternalArticles: Array<{ __typename: 'ExternalArticleRecord', id: string, title: string, publisherName?: string | null, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, externalUrl: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allArticleCategories: Array<{ __typename: 'ArticleCategoryRecord', id: string, category: string }> };
+type ArticlesPageQuery = { __typename?: 'Query', articlesPage?: { __typename?: 'ArticlesPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }> } | null, allArticles: Array<{ __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt: string } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allPdfArticles: Array<{ __typename: 'PdfArticleRecord', id: string, title: string, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, documentFile: { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allExternalArticles: Array<{ __typename: 'ExternalArticleRecord', id: string, title: string, publisherName?: string | null, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, externalUrl: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allArticleCategories: Array<{ __typename: 'ArticleCategoryRecord', id: string, category: string }> };
 
 type FaqPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type FaqPageQuery = { __typename?: 'Query', faqPage?: { __typename?: 'FaqPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }> } | null, allFaqCategories: Array<{ __typename: 'FaqCategoryRecord', id: string, category: string }>, allFaqGenerals: Array<{ __typename?: 'FaqGeneralRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGeneralModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqStudentLives: Array<{ __typename?: 'FaqStudentLifeRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqStudentLifeModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqPartnerships: Array<{ __typename?: 'FaqPartnershipRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqPartnershipModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqGovernanceFinancings: Array<{ __typename?: 'FaqGovernanceFinancingRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGovernanceFinancingModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqCommunities: Array<{ __typename?: 'FaqCommunityRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqCommunityModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }> };
+type FaqPageQuery = { __typename?: 'Query', faqPage?: { __typename?: 'FaqPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }> } | null, allFaqCategories: Array<{ __typename: 'FaqCategoryRecord', id: string, category: string }>, allFaqGenerals: Array<{ __typename?: 'FaqGeneralRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqGeneralModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqStudentLives: Array<{ __typename?: 'FaqStudentLifeRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqStudentLifeModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqPartnerships: Array<{ __typename?: 'FaqPartnershipRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqPartnershipModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqGovernanceFinancings: Array<{ __typename?: 'FaqGovernanceFinancingRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqGovernanceFinancingModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }>, allFaqCommunities: Array<{ __typename?: 'FaqCommunityRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqCommunityModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } }> };
 
 type RootLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type RootLayoutQuery = { __typename?: 'Query', nav?: { __typename: 'NavRecord', id: string, links: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | null, footer?: { __typename: 'FooterRecord', id: string, footerAddress: string, footerEmailLabel: string, footerSignupLabel: string, footerEmail: { __typename: 'EmailLinkRecord', id: string, email: string }, footerLinks: Array<{ __typename: 'AnchorLinkRecord', id: string, linkText: string, href: string } | { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }>, footerSignupLink: { __typename: 'KeepMePostedLinkRecord', id: string, linkText: string } } | null, privacyPolicy?: { __typename: 'PrivacyPolicyRecord', id: string, privacyPolicyHeading: string, privacyPolicyText: { __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField', value: unknown } } | null };
 
-type ExternalVideoFragment = { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } };
+type ExternalVideoFragment = { __typename: 'ExternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } };
 
-type InternalVideoFragment = { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } };
+type InternalVideoFragment = { __typename: 'InternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } };
 
-type HubspotFormFragment = { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null };
+type HubspotFormFragment = { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt: string };
 
 type ArticleCarouselFragment = { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> };
 
@@ -4818,11 +4831,11 @@ type ArticleTestimonialFragment = { __typename: 'ArticleTestimonialRecord', id: 
 
 type ArticleCategoryFragment = { __typename: 'ArticleCategoryRecord', id: string, category: string };
 
-type ArticleFragment = { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt?: string | null } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt?: string | null, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
+type ArticleFragment = { __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt: string } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
 
-type PdfArticleFragment = { __typename: 'PdfArticleRecord', id: string, title: string, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, documentFile: { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
+type PdfArticleFragment = { __typename: 'PdfArticleRecord', id: string, title: string, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, documentFile: { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
 
-type ExternalArticleFragment = { __typename: 'ExternalArticleRecord', id: string, title: string, publisherName?: string | null, slug: string, publishedAt?: string | null, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, externalUrl: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
+type ExternalArticleFragment = { __typename: 'ExternalArticleRecord', id: string, title: string, publisherName?: string | null, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, externalUrl: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
 
 type ArticlesBodyFragment = { __typename?: 'ArticlesPageRecord', slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> };
 
@@ -4830,15 +4843,15 @@ type ResponsiveImageFragment = { __typename: 'ResponsiveImage', sizes: string, s
 
 type FaqCategoryFragment = { __typename: 'FaqCategoryRecord', id: string, category: string };
 
-type FaqGeneralFragment = { __typename?: 'FaqGeneralRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGeneralModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+type FaqGeneralFragment = { __typename?: 'FaqGeneralRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqGeneralModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
 
-type FaqStudentLifeFragment = { __typename?: 'FaqStudentLifeRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqStudentLifeModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+type FaqStudentLifeFragment = { __typename?: 'FaqStudentLifeRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqStudentLifeModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
 
-type FaqPartnershipFragment = { __typename?: 'FaqPartnershipRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqPartnershipModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+type FaqPartnershipFragment = { __typename?: 'FaqPartnershipRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqPartnershipModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
 
-type FaqGovernanceFinancingFragment = { __typename?: 'FaqGovernanceFinancingRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqGovernanceFinancingModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+type FaqGovernanceFinancingFragment = { __typename?: 'FaqGovernanceFinancingRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqGovernanceFinancingModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
 
-type FaqCommunityFragment = { __typename?: 'FaqCommunityRecord', question: string, publishedAt?: string | null, answer: { __typename?: 'FaqCommunityModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
+type FaqCommunityFragment = { __typename?: 'FaqCommunityRecord', question: string, publishedAt: string, answer: { __typename?: 'FaqCommunityModelAnswerField', value: unknown }, category: { __typename: 'FaqCategoryRecord', id: string, category: string } };
 
 type HomeCampusFragment = { __typename?: 'HomePageRecord', campusTitle: string, campusHeading: string, campusBody?: { __typename?: 'HomePageModelCampusBodyField', value: unknown } | null, campusImage?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null };
 

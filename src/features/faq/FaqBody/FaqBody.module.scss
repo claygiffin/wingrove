@@ -38,7 +38,6 @@
       color: var(--color-blueDark);
       background-color: var(--color-sand);
       padding: 0.75em 1em;
-      cursor: pointer;
       transition: all 300ms ease;
 
       &:hover {
@@ -67,7 +66,6 @@
     border-bottom: 1px solid var(--color-gray);
     display: flex;
     flex-direction: column;
-    cursor: pointer;
 
     &:hover {
       .questionWrapper {
@@ -132,7 +130,7 @@
 
       &.active {
         height: fit-content;
-        padding: 0 0.15em 0.25em;
+        padding: 0 0.15em 0.25em 0;
 
         @include media('<m') {
           padding: 0.1em 0 0.3em;
@@ -140,7 +138,7 @@
       }
 
       > p {
-        width: 80%;
+        max-width: 110ch;
         font-size: var(--fs-16);
         font-weight: 400;
         color: var(--color-grayDark);

@@ -63,7 +63,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
     query,
   })
   return generateDatoCmsMetadata(faqPage?._seoMetaTags || [], {
-    canonicalSlug: faqPage?.slug,
+    canonicalSlug: 'faq',
   })
 }
 

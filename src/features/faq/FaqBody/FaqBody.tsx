@@ -1,6 +1,11 @@
 'use client'
 
-import { type ComponentProps, useEffect, useState } from 'react'
+import {
+  type ComponentProps,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
 
 import { DatoStructuredText } from '@/features/dato-structured-text'
 import { classes } from '@/utils/css'
@@ -16,87 +21,103 @@ export const FaqBody = ({ data, ...props }: Props) => {
     cat => cat?.category || ''
   )
 
-  const [selectItemIndex, setSelectItemIndex] = useState(0)
+  const [selectedItemIndexes, setSelectedItemIndexes] = useState<
+    number[]
+  >([])
   const [selectedCategory, setSelectedCategory] = useState(
     categories[0] || ''
   )
-  const [filteredArticles, setFilteredArticles] = useState<Array<any>>(
-    []
-  )
 
-  useEffect(() => {
-    if (!data) return
-
-    const allArticles = [
+  const allArticles = useMemo(() => {
+    if (!data) return []
+    return [
       ...(data.allFaqGenerals || []),
       ...(data.allFaqStudentLives || []),
       ...(data.allFaqPartnerships || []),
       ...(data.allFaqGovernanceFinancings || []),
       ...(data.allFaqCommunities || []),
-    ]
-
-    allArticles.sort((a, b) => {
+    ].sort((a, b) => {
       const dateA = new Date(a?.publishedAt || '').getTime()
       const dateB = new Date(b?.publishedAt || '').getTime()
       return dateB - dateA
     })
+  }, [data])
 
-    setFilteredArticles(
-      allArticles.filter(article => {
-        return article?.category?.category === selectedCategory
-      })
-    )
-  }, [data, selectedCategory])
+  const filteredArticles = useMemo(
+    () =>
+      allArticles.filter(
+        article => article?.category?.category === selectedCategory
+      ),
+    [allArticles, selectedCategory]
+  )
 
-  const selectCategory = (category: string) => {
-    setSelectedCategory(category)
-    setSelectItemIndex(0)
+  const handleSelectCategory = (category: string) => {
+    setSelectedCategory(prev => {
+      if (prev === category) {
+        return prev
+      }
+      setSelectedItemIndexes([])
+      return category
+    })
   }
-
+  const handleSelectItem = (index: number) => {
+    setSelectedItemIndexes(prev => {
+      if (prev.includes(index)) {
+        return prev.filter(item => item !== index)
+      }
+      return [...prev, index]
+    })
+  }
   return (
     <div
       className={styles.body}
       {...props}
     >
       <div className={styles.categorySelector}>
-        {(categories || []).map((category, index) => {
+        {categories.map((category, index) => {
           return (
-            <div
+            <button
               key={index}
               className={classes(
                 styles.categoryItem,
                 selectedCategory === category ? styles.active : ''
               )}
-              onClick={() => selectCategory(category)}
+              onClick={() => handleSelectCategory(category)}
             >
               {category}
-            </div>
+            </button>
           )
         })}
       </div>
-      {(filteredArticles || []).map((item, index) => {
+      {filteredArticles.map((item, index) => {
         return (
           <div
             className={styles.itemWrapper}
             key={index}
-            onClick={() => setSelectItemIndex(index)}
           >
-            <div className={styles.questionWrapper}>
+            <button
+              className={styles.questionWrapper}
+              onClick={() => handleSelectItem(index)}
+            >
               <h3 className={styles.question}>{item?.question}</h3>
               <div
                 className={classes(
                   styles.button,
-                  selectItemIndex === index ? styles.active : ''
+                  selectedItemIndexes?.includes(index)
+                    ? styles.active
+                    : ''
                 )}
               >
                 <div className={styles.horizontalLine}></div>
                 <div className={styles.verticalLine}></div>
               </div>
-            </div>
+            </button>
             <div
               className={classes(
                 styles.answerWrapper,
-                selectItemIndex === index ? styles.active : ''
+                selectedItemIndexes?.includes(index)
+                  ? styles.active
+                  : ''
               )}
             >
               <DatoStructuredText data={item?.answer} />

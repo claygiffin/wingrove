@@ -3,12 +3,12 @@
 .article {
   pointer-events: all;
   font-size: var(--fs-18);
-  width: 90vw;
   box-sizing: border-box;
   &[data-layout='MODAL'] {
     background-color: #fff;
   }
   .articleBody {
+    max-width: 100ch;
     &[data-layout='MODAL'] {
       padding: var(--gtr-72);
     }

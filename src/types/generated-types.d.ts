@@ -397,6 +397,131 @@ type BooleanFilter = {
   eq?: InputMaybe<Scalars['BooleanType']['input']>;
 };
 
+type CampusAspectModelDescriptionField = {
+  __typename?: 'CampusAspectModelDescriptionField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+/** Block of type Campus Aspect (campus_aspect) */
+type CampusAspectRecord = RecordInterface & {
+  __typename?: 'CampusAspectRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  description?: Maybe<CampusAspectModelDescriptionField>;
+  icon: FileField;
+  id: Scalars['ItemId']['output'];
+  title: Scalars['String']['output'];
+};
+
+
+/** Block of type Campus Aspect (campus_aspect) */
+type CampusAspectRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type CampusPageModelIntroBodyField = {
+  __typename?: 'CampusPageModelIntroBodyField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+type CampusPageModelSpacesBodyField = {
+  __typename?: 'CampusPageModelSpacesBodyField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+/** Record of type Campus Page (campus_page) */
+type CampusPageRecord = RecordInterface & {
+  __typename?: 'CampusPageRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  campusAspects: Array<CampusAspectRecord>;
+  id: Scalars['ItemId']['output'];
+  introBody: CampusPageModelIntroBodyField;
+  introHeading: Scalars['String']['output'];
+  legend: Array<LegendGroupRecord>;
+  map: FileField;
+  mapHeading: Scalars['String']['output'];
+  pageTitle: Scalars['String']['output'];
+  seo?: Maybe<SeoField>;
+  slug?: Maybe<Scalars['String']['output']>;
+  spaces: Array<CampusSpaceRecord>;
+  spacesBody?: Maybe<CampusPageModelSpacesBodyField>;
+  spacesHeading: Scalars['String']['output'];
+};
+
+
+/** Record of type Campus Page (campus_page) */
+type CampusPageRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+type CampusSpaceModelDescriptionField = {
+  __typename?: 'CampusSpaceModelDescriptionField';
+  blocks: Array<Scalars['String']['output']>;
+  inlineBlocks: Array<Scalars['String']['output']>;
+  links: Array<Scalars['String']['output']>;
+  value: Scalars['JsonField']['output'];
+};
+
+/** Block of type Campus Space (campus_space) */
+type CampusSpaceRecord = RecordInterface & {
+  __typename?: 'CampusSpaceRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  description?: Maybe<CampusSpaceModelDescriptionField>;
+  id: Scalars['ItemId']['output'];
+  image: ImageFileField;
+  title: Scalars['String']['output'];
+};
+
+
+/** Block of type Campus Space (campus_space) */
+type CampusSpaceRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
 type CollectionMetadata = {
   __typename?: 'CollectionMetadata';
   count: Scalars['IntType']['output'];
@@ -3378,6 +3503,60 @@ type KeepMePostedLinkRecord_seoMetaTagsArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
+/** Block of type Legend Group (legend_group) */
+type LegendGroupRecord = RecordInterface & {
+  __typename?: 'LegendGroupRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  legendItems?: Maybe<Scalars['JsonField']['output']>;
+  listType?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Block of type Legend Group (legend_group) */
+type LegendGroupRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
+/** Block of type Legend Item (legend_item) */
+type LegendItemRecord = RecordInterface & {
+  __typename?: 'LegendItemRecord';
+  _createdAt: Scalars['DateTime']['output'];
+  /** Editing URL */
+  _editingUrl?: Maybe<Scalars['String']['output']>;
+  _firstPublishedAt: Scalars['DateTime']['output'];
+  _isValid: Scalars['BooleanType']['output'];
+  _modelApiKey: Scalars['String']['output'];
+  _publicationScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _publishedAt: Scalars['DateTime']['output'];
+  /** Generates SEO and Social card meta tags to be used in your frontend */
+  _seoMetaTags: Array<Tag>;
+  _status: ItemStatus;
+  _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
+  _updatedAt: Scalars['DateTime']['output'];
+  id: Scalars['ItemId']['output'];
+  label: Scalars['String']['output'];
+  title: Scalars['String']['output'];
+};
+
+
+/** Block of type Legend Item (legend_item) */
+type LegendItemRecord_seoMetaTagsArgs = {
+  locale?: InputMaybe<SiteLocale>;
+};
+
 type LightboxModelTextField = {
   __typename?: 'LightboxModelTextField';
   blocks: Array<Scalars['String']['output']>;
@@ -3723,6 +3902,8 @@ type Query = {
   articleCategory?: Maybe<ArticleCategoryRecord>;
   /** Returns the single instance record */
   articlesPage?: Maybe<ArticlesPageRecord>;
+  /** Returns the single instance record */
+  campusPage?: Maybe<CampusPageRecord>;
   /** Returns a specific record */
   externalArticle?: Maybe<ExternalArticleRecord>;
   /** Returns a specific record */
@@ -3979,6 +4160,13 @@ type QueryarticleCategoryArgs = {
 
 /** The query root for this schema */
 type QueryarticlesPageArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** The query root for this schema */
+type QuerycampusPageArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
 };
@@ -4803,6 +4991,11 @@ type ArticlesPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 type ArticlesPageQuery = { __typename?: 'Query', articlesPage?: { __typename?: 'ArticlesPageRecord', title: string, slug: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }> } | null, allArticles: Array<{ __typename: 'ArticleRecord', id: string, title: string, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, body: { __typename?: 'ArticleModelBodyField', value: unknown, blocks: Array<{ __typename: 'ArticleAccordionRecord', id: string, title: string, text: { __typename?: 'ArticleAccordionModelTextField', value: unknown } } | { __typename: 'ArticleButtonFieldRecord', id: string, buttons: Array<{ __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string } | { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } }> } | { __typename: 'ArticleCarouselRecord', id: string, description: string, images: Array<{ __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } }> } | { __typename: 'ArticlePullQuoteRecord', id: string, quote: { __typename?: 'ArticlePullQuoteModelQuoteField', value: unknown } } | { __typename: 'ArticleTestimonialRecord', id: string, customerName: string, testimonialBody: { __typename?: 'ArticleTestimonialModelTestimonialBodyField', value: unknown }, customerPhoto?: { __typename?: 'FileField', responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null, focalPoint?: { __typename?: 'focalPoint', x: number, y: number } | null } | null } | { __typename: 'ExternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoField', url: string, thumbnailUrl: string, title: string, width: number, height: number } } | { __typename: 'HubspotFormRecord', id: string, portalId: string, formId: string, region: string, publishedAt: string } | { __typename: 'ImageBlockRecord', id: string, image: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } } } | { __typename: 'InternalVideoRecord', id: string, publishedAt: string, video: { __typename: 'VideoFileField', id: string, video: { __typename?: 'UploadVideoField', muxPlaybackId: string, title?: string | null, width: number, height: number, thumbnailUrl: string } } }> }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allPdfArticles: Array<{ __typename: 'PdfArticleRecord', id: string, title: string, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, documentFile: { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allExternalArticles: Array<{ __typename: 'ExternalArticleRecord', id: string, title: string, publisherName?: string | null, slug: string, publishedAt: string, category: { __typename: 'ArticleCategoryRecord', id: string, category: string }, externalUrl: { __typename: 'ExternalLinkRecord', id: string, url: string, linkText: string }, thumbnail: { __typename?: 'ImageFileField', alt?: string | null, title?: string | null, responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, _seoMetaTags: Array<{ __typename?: 'Tag', tag: string }> }>, allArticleCategories: Array<{ __typename: 'ArticleCategoryRecord', id: string, category: string }> };
 
+type CampusPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type CampusPageQuery = { __typename?: 'Query', campusPage?: { __typename: 'CampusPageRecord', pageTitle: string, id: string, introHeading: string, spacesHeading: string, mapHeading: string, _seoMetaTags: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, introBody: { __typename?: 'CampusPageModelIntroBodyField', value: unknown }, campusAspects: Array<{ __typename: 'CampusAspectRecord', id: string, title: string, description?: { __typename?: 'CampusAspectModelDescriptionField', value: unknown } | null, icon: { __typename?: 'FileField', format: string, url: string, height?: number | null, width?: number | null } }>, spacesBody?: { __typename?: 'CampusPageModelSpacesBodyField', value: unknown } | null, spaces: Array<{ __typename: 'CampusSpaceRecord', id: string, title: string, image: { __typename?: 'ImageFileField', responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, description?: { __typename?: 'CampusSpaceModelDescriptionField', value: unknown } | null }>, map: { __typename?: 'FileField', format: string, url: string, width?: number | null, height?: number | null, alt?: string | null, responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null }, legend: Array<{ __typename: 'LegendGroupRecord', id: string, listType?: string | null, legendItems?: unknown | null }> } | null };
+
 type FaqPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -4884,6 +5077,18 @@ type LightboxFragment = { __typename: 'LightboxRecord', id: string, title: strin
 type PageLinkFragment = { __typename: 'PageLinkRecord', id: string, linkText: string, page: { __typename: 'ArticlesPageRecord', slug: string } | { __typename: 'FaqPageRecord', slug: string } | { __typename: 'HomePageRecord' } };
 
 type PdfFragment = { __typename: 'PdfRecord', id: string, pdfLink?: string | null, pdf: { __typename?: 'FileField', title?: string | null, url: string } };
+
+type CampusAspectFragment = { __typename: 'CampusAspectRecord', id: string, title: string, description?: { __typename?: 'CampusAspectModelDescriptionField', value: unknown } | null, icon: { __typename?: 'FileField', format: string, url: string, height?: number | null, width?: number | null } };
+
+type CampusIntroFragment = { __typename: 'CampusPageRecord', id: string, introHeading: string, introBody: { __typename?: 'CampusPageModelIntroBodyField', value: unknown }, campusAspects: Array<{ __typename: 'CampusAspectRecord', id: string, title: string, description?: { __typename?: 'CampusAspectModelDescriptionField', value: unknown } | null, icon: { __typename?: 'FileField', format: string, url: string, height?: number | null, width?: number | null } }> };
+
+type CampusMapFragment = { __typename: 'CampusPageRecord', id: string, mapHeading: string, map: { __typename?: 'FileField', format: string, url: string, width?: number | null, height?: number | null, alt?: string | null, responsiveImage?: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null } | null }, legend: Array<{ __typename: 'LegendGroupRecord', id: string, listType?: string | null, legendItems?: unknown | null }> };
+
+type LegendGroupFragment = { __typename: 'LegendGroupRecord', id: string, listType?: string | null, legendItems?: unknown | null };
+
+type CampusSpaceFragment = { __typename: 'CampusSpaceRecord', id: string, title: string, image: { __typename?: 'ImageFileField', responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, description?: { __typename?: 'CampusSpaceModelDescriptionField', value: unknown } | null };
+
+type CampusSpacesFragment = { __typename: 'CampusPageRecord', id: string, spacesHeading: string, spacesBody?: { __typename?: 'CampusPageModelSpacesBodyField', value: unknown } | null, spaces: Array<{ __typename: 'CampusSpaceRecord', id: string, title: string, image: { __typename?: 'ImageFileField', responsiveImage: { __typename: 'ResponsiveImage', sizes: string, src: string, width: number, height: number, aspectRatio: number, alt?: string | null, title?: string | null, base64?: string | null }, focalPoint: { __typename?: 'focalPoint', x: number, y: number } }, description?: { __typename?: 'CampusSpaceModelDescriptionField', value: unknown } | null }> };
 
 type PrivacyPolicyFragment = { __typename: 'PrivacyPolicyRecord', id: string, privacyPolicyHeading: string, privacyPolicyText: { __typename?: 'PrivacyPolicyModelPrivacyPolicyTextField', value: unknown } };
 

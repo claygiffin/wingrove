@@ -29,6 +29,11 @@ export const teodor = localFont({
       weight: '400',
       style: 'normal',
     },
+    {
+      path: './Teodor/Teodor-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
   ],
   display: 'swap',
   variable: '--ff-teodor',

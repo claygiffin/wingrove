@@ -27,7 +27,7 @@
   }
 }
 
-@mixin scrimGradient($startColor: #000, $direction: to bottom) {
+@mixin scrim-gradient($startColor: #000, $direction: to bottom) {
   $scrimCoordinates: (
     '0%': 1,
     '10.34%': 0.9854227405,
@@ -57,7 +57,7 @@
     $stops: append($stops, $stop, comma);
   }
 
-  background: linear-gradient($direction, $stops);
+  background-image: linear-gradient($direction, $stops);
 }
 
 @mixin aspect-ratio($ar) {

@@ -16,7 +16,6 @@
 
   --ff-body: var(--ff-helveticaNeue), var(--sans-serif);
   --ff-display: var(--ff-teodor), var(--serif);
-  --ff-nav: var(--ff-brown), var(--serif);
 
   /* Font Sizes */
   --fs-144: calc(4rem + 6.667vw);
@@ -140,7 +139,7 @@ body {
 h1,
 h2 {
   font-family: var(--ff-display);
-  font-weight: 225;
+  font-weight: 400;
   line-height: 1.1;
 }
 
@@ -152,7 +151,7 @@ h4,
 h5,
 h6 {
   font-family: var(--ff-display);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.125;
 }
 p {

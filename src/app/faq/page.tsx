@@ -1,5 +1,6 @@
 import gql from 'graphql-tag'
 import type { Metadata, NextPage } from 'next'
+import { notFound } from 'next/navigation'
 
 import {
   FaqBody,
@@ -11,6 +12,7 @@ import {
   FaqStudentLifeFragment,
 } from '@/features/faq'
 import { LogoWelcome } from '@/features/logo'
+import { PageHero } from '@/features/page-sections'
 import { generateDatoCmsMetadata } from '@/features/seo'
 import { datoRequest } from '@/lib/datocms-fetch'
 
@@ -71,16 +73,13 @@ const FaqPage: NextPage = async () => {
   const { data } = await datoRequest<Queries.FaqPageQuery>({
     query,
   })
+  if (!data.faqPage) notFound()
   return (
     <main className={styles.main}>
-      <div className={styles.titleWrapper}>
-        <h2 className={styles.title}>{data?.faqPage?.title}</h2>
-        <div className={styles.backgroundLogo}>
-          <div className={styles.logoWrapper}>
-            <LogoWelcome />
-          </div>
-        </div>
-      </div>
+      <PageHero
+        title={data.faqPage?.title}
+        color="sand"
+      />
       <FaqBody data={data} />
     </main>
   )

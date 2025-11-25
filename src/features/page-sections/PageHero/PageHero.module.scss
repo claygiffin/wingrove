@@ -1,0 +1,39 @@
+@use '@/theme/mixins' as *;
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color, var(--color-sand));
+  position: relative;
+  color: var(--color-blueDark);
+  .title {
+    font-size: var(--fs-84);
+    line-height: 0.9;
+    z-index: 2;
+    @include media('<ms') {
+      font-size: var(--fs-60);
+    }
+  }
+  .backgroundLogo {
+    z-index: 1;
+    @include absolute-fill;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    .logoWrapper {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      svg {
+        opacity: 0.25;
+        width: 100%;
+        transform: scale(4);
+        path {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}

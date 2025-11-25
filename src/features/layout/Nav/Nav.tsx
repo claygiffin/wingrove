@@ -5,6 +5,7 @@ import {
   type ComponentProps,
   Fragment,
   useEffect,
+  useRef,
   useState,
 } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -26,7 +27,7 @@ type Props = ComponentProps<'div'> & {
 export const Nav = ({ data, className, ...props }: Props) => {
   const { inView: spacerInView, ref: spacerRef } = useInView()
 
-  const [navRef, setNavRef] = useState<HTMLElement | null>(null)
+  const navRef = useRef<HTMLElement | null>(null)
   const [contactModalOpen, setContactModalOpen] = useState(false)
 
   const navHeight = useElementHeight(navRef) || 0
@@ -56,7 +57,7 @@ export const Nav = ({ data, className, ...props }: Props) => {
       >
         <nav
           className={styles.nav}
-          ref={node => setNavRef(node)}
+          ref={navRef}
         >
           <Link
             href="/"

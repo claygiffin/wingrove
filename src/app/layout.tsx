@@ -54,12 +54,6 @@ const RootLayout = async ({
         )}
       >
         <head>
-          <link
-            rel="icon"
-            href="/icon?<generated>"
-            type="image/<generated>"
-            sizes="<generated>"
-          />
           <GoogleTagManager
             gtmId={process.env.NEXT_PUBLIC_GTM_ID || ''}
           />
